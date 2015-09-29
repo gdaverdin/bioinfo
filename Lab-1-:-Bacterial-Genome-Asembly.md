@@ -27,3 +27,10 @@ https://wiki.gacrc.uga.edu/wiki/SPAdes
     #!/bin/bash
     export LD_LIBRARY_PATH=/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
     python2.7 /usr/local/spades/latest/bin/spades.py --pe1-1 ERR632095_1.fastq --pe1-2 ERR632095_2.fastq --pacbio Vcholerae_ElTor.pacbio.fastq --threads 2 -m 12 -o Vcholera_spades
+
+
+
+
+# Homework (due XX)
+
+1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the coverage of Illumina data that you downloaded and used in the assembly.
