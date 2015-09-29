@@ -19,6 +19,8 @@ Let’s first look at the first few lines of our fastq file using “head”. Lo
 
 Now check out the quality of this data using FASTQC. 
 
+https://wiki.gacrc.uga.edu/wiki/FastQC
+
 
 Hybrid Illumina + Pacbio genome assembly using SPAdes
 	SPAdes is a 
