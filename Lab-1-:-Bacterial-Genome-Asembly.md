@@ -1,10 +1,9 @@
-There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. 
+There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the CDC to _de novo_ assemble this novel, rapidly evolving strain. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and Pacbio reads.
 
-A typical V. cholerae genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with 3,885 annotated genes. 
+A typical _V. cholerae_ genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with 3,885 annotated genes. 
 
 ### Downloading data from SRA
-Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA. The SRA developers maintain a set of tools to quickly let you download sequence data submitted to the SRA.
-	First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control (CDC) using the SRA “fastq-dump” program. 
+Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control (CDC) using the SRA “fastq-dump” program. 
 
     /usr/local/sra/latest/bin/fastq-dump --split-files ERR632095
 
@@ -14,7 +13,7 @@ Let’s first look at the first few lines of our fastq file using “head”. Lo
 
     head ERR632095_1.fastq
 
-Now let's look at these reads more objectively using FASTQC. We are looking for any widespread issues of adapter contamination or poor sequence quality. There will always be some, but less is better.
+Now let's look at these reads more objectively using FASTQC. We are looking for any widespread issues of adapter contamination or poor sequence quality. There will usually be some, but less is better.
 
 https://wiki.gacrc.uga.edu/wiki/FastQC
 
@@ -23,6 +22,7 @@ You can run FASTQC on this small dataset on the interactive node.
     qlogin
     /usr/local/fastqc/latest/fastqc ERR632095_1.fastq ERR632095_2.fastq
 
+Download the two html output files (ERR632095_1_fastqc.html and ERR632095_2_fastqc.html) and explore them. Do you see evidence of adapter read-through? A high percentage of poor quality reads?
 
 Hybrid Illumina + Pacbio genome assembly using SPAdes
 	SPAdes is a 
