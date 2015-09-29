@@ -33,4 +33,4 @@ https://wiki.gacrc.uga.edu/wiki/SPAdes
 
 # Homework (due XX)
 
-1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the coverage of Illumina data that you downloaded and used in the assembly.
+1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the approximate coverage of Illumina data that you downloaded and used in the assembly (example: nearly 22X coverage).
