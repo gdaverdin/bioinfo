@@ -5,8 +5,9 @@ A typical _V. cholerae_ genome is organized into two circular chromosomes with a
 ![source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Cholera_bacteria_SEM.jpg/240px-Cholera_bacteria_SEM.jpg)
 
 ### Downloading data from SRA
-Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control using the SRA “fastq-dump” program. 
+Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control using the SRA “fastq-dump” program. Go ahead and log onto an interactive node, too, since we don't want to crush the head node.
 
+    qlogin
     /usr/local/sra/latest/bin/fastq-dump --split-files ERR632095
 
 When downloading paired-end data, the --split-files flag separates the forward and reverse reads into two fastq files. If you don't use that flag, you get a single interleaved fastq file.
@@ -15,13 +16,14 @@ Let’s first look at the first few lines of our fastq file using “head”. Lo
 
     head ERR632095_1.fastq
 
+### Check the overall quality of the Illumina reads
+
 Now let's look at these reads more objectively using FASTQC. We are looking for any widespread issues of adapter contamination or poor sequence quality. There will usually be some, but less is better.
 
 https://wiki.gacrc.uga.edu/wiki/FastQC
 
-You can run FASTQC on this small dataset on the interactive node.
+You can run FASTQC on this small dataset on the interactive node as opposed to writing a submission script and submitting a job. It doesn't matter for really small jobs like this.
 
-    qlogin
     /usr/local/fastqc/latest/fastqc ERR632095_1.fastq ERR632095_2.fastq
 
 Download the two html output files (ERR632095_1_fastqc.html and ERR632095_2_fastqc.html) and explore them. Do you see evidence of adapter read-through? A high percentage of poor quality reads?
