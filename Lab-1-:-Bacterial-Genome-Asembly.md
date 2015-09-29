@@ -1,15 +1,17 @@
-There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the CDC to _de novo_ assemble this novel, rapidly evolving strain. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and Pacbio reads.
+There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the CDC to _de novo_ assemble this novel, rapidly evolving strain. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and longer Pacbio reads.
 
 A typical _V. cholerae_ genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with 3,885 annotated genes. 
 
+![source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Cholera_bacteria_SEM.jpg/240px-Cholera_bacteria_SEM.jpg)
+
 ### Downloading data from SRA
-Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control (CDC) using the SRA “fastq-dump” program. 
+Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control using the SRA “fastq-dump” program. 
 
     /usr/local/sra/latest/bin/fastq-dump --split-files ERR632095
 
 When downloading paired-end data, the --split-files flag separates the forward and reverse reads into two fastq files. If you don't use that flag, you get a single interleaved fastq file.
 
-Let’s first look at the first few lines of our fastq file using “head”. Look at the headers, spot the quality scores. Remember that each read occupies 4 lines of a fastq file.
+Let’s first look at the first few lines of our fastq file using “head”. Look at the headers, spot the quality scores. Remember that each read occupies 4 lines of a fastq file. To save space, the SRA automatically reformats and shortens the read IDs of submitted sequences (@ERR632095.1, @ERR632095.2, @ERR632095.3, ...)
 
     head ERR632095_1.fastq
 
