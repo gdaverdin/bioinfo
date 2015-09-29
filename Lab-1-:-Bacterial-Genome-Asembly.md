@@ -1,6 +1,6 @@
-There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the CDC to _de novo_ assemble this novel, rapidly evolving strain. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and longer Pacbio reads.
+There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the Center for Disease Control (CDC) to _de novo_ assemble and annotate this novel, rapidly evolving strain that is inducing massive panic as the infection spreads. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and longer Pacbio reads.
 
-A typical _V. cholerae_ genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with 3,885 annotated genes. 
+All you know is that a typical _V. cholerae_ genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with ~3,800 annotated genes. 
 
 ![source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Cholera_bacteria_SEM.jpg/240px-Cholera_bacteria_SEM.jpg)
 
@@ -8,7 +8,7 @@ A typical _V. cholerae_ genome is organized into two circular chromosomes with a
 Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control using the SRA “fastq-dump” program. Go ahead and log onto an interactive node, too, since we don't want to crush the head node.
 
     qlogin
-    mkdir Vcholerae_genome   #go ahead and make a new directory for this project
+    mkdir Vcholerae_genome   # make a new directory for this project
     cd Vcholerae_genome/
     /usr/local/sra/latest/bin/fastq-dump --split-files ERR632095
 
@@ -34,11 +34,17 @@ Download the two html output files (ERR632095_1_fastqc.html and ERR632095_2_fast
 
 ### Hybrid Illumina + Pacbio genome assembly using SPAdes
 
-SPAdes is a cutting-edge genome assembler that specializes in leveraging multiple data types to assemble smaller genomes.  
+SPAdes is a cutting-edge genome assembler that specializes in leveraging multiple data types to assemble smaller genomes. Here we will use both Pacbio and Illumina data together to build a better assembly. 
 
 https://wiki.gacrc.uga.edu/wiki/SPAdes
 
-In your command-line text editor of choice (nano, pico, vim, emacs, etc), create a bash shell submission script. I named mine "run_spades.sh". The *.sh ending is not necessary, but it is good practice, since we are writing this simple script in the bash language.
+Just like with the Illumina data, we want to first check the quality of the Pacbio data. I have combined SRA data from several SMRT cells into one fastq file for you; copy this fastq file into your working directory. Run FASTQC again on this single fastq file of Pacbio reads.
+
+In your command-line text editor of choice (nano, pico, vim, emacs, etc), create a bash shell submission script. I named mine "run_spades.sh". The *.sh ending is not necessary, but it is good practice, since we are writing this simple script in the bash language. Practice and become proficient at editing text on the command line!
+
+The GACRC will include an example submission script for every program installed on the cluster. There are always some differences in the way programs run and what they require in terms of dependencies. If I had not read the GACRC wiki page for SPAdes, I would NOT have remembered to include the "export LD_LIBRARY_PATH" line and the program would fail immediately. Always, always check the GACRC wiki page first. 
+
+run_spades.sh:
 
     #!/bin/bash
     export LD_LIBRARY_PATH=/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
@@ -47,12 +53,17 @@ In your command-line text editor of choice (nano, pico, vim, emacs, etc), create
 Then submit your job by typing this on the command line:
     qsub -q rcc-30d -pe thread 2 ./run_spades.sh
 
-This assembly will take around XX minutes to finish.
+This assembly took me 42 minutes to finish. To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
+
+    wget http://jlmlab.uga.edu/~aharkess/calculate_N50.pl
+
+You can look at the code (note: this is ugly code) using less or cat.
 
 ### Bacterial genome annotation using BASys
 
-
+An assembled genome isn't very valuable to us without a set of gene annotations, though. To identify the gene positions in your assembly, we can use the BASys webserver. In short, BASys uses Glimmer to predict genes. Glimmer utilizes Hidden Markov Models (HMMs) for microbial genes to predict their position in a query genome. When your assembly finishes, download the scaffolds.fasta file and start an annotation run on the BASys server using default settings.
 
 # Homework (due XX)
 
 1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the approximate coverage of Illumina data that you downloaded and used in the assembly (example: nearly 22X coverage).
+2) What is your assembled scaffold N50?
