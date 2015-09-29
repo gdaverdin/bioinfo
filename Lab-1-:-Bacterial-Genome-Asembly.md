@@ -51,9 +51,12 @@ run_spades.sh:
     python2.7 /usr/local/spades/latest/bin/spades.py --pe1-1 ERR632095_1.fastq --pe1-2 ERR632095_2.fastq --pacbio Vcholerae_ElTor.pacbio.fastq --threads 2 -m 12 -o Vcholera_spades
 
 Then submit your job by typing this on the command line:
+
     qsub -q rcc-30d -pe thread 2 ./run_spades.sh
 
-This assembly took me 42 minutes to finish. To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
+This assembly took me 42 minutes to finish. Before you leave lab, you should get this assembly started. 
+
+To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
 
     wget http://jlmlab.uga.edu/~aharkess/calculate_N50.pl
 
@@ -61,7 +64,7 @@ You can look at the code (note: this is ugly code) using less or cat.
 
 ### Bacterial genome annotation using BASys
 
-An assembled genome isn't very valuable to us without a set of gene annotations, though. To identify the gene positions in your assembly, we can use the BASys webserver. In short, BASys uses Glimmer to predict genes. Glimmer utilizes Hidden Markov Models (HMMs) for microbial genes to predict their position in a query genome. When your assembly finishes, download the scaffolds.fasta file and start an annotation run on the BASys server using default settings.
+An assembled genome isn't very valuable to us without a set of gene annotations, though. To identify where the genes are in your assembly, we can use the BASys webserver. In short, BASys uses Glimmer to predict genes; Glimmer utilizes Hidden Markov Models (HMMs) for microbial genes to predict their position in a query genome. When your assembly finishes, download the scaffolds.fasta file and start an annotation run on the BASys server using default settings.
 
 # Homework (due XX)
 
