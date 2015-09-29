@@ -28,9 +28,11 @@ You can run FASTQC on this small dataset on the interactive node as opposed to w
 
 Download the two html output files (ERR632095_1_fastqc.html and ERR632095_2_fastqc.html) and explore them. Do you see evidence of adapter read-through? A high percentage of poor quality reads?
 
-Hybrid Illumina + Pacbio genome assembly using SPAdes
-	SPAdes is a 
+![](http://i.imgur.com/wUPJKGT.png)
 
+### Hybrid Illumina + Pacbio genome assembly using SPAdes
+
+SPAdes is a cutting-edge genome assembler that specializes in leveraging multiple data types to assemble smaller genomes.  
 
 https://wiki.gacrc.uga.edu/wiki/SPAdes
 
