@@ -1,5 +1,3 @@
-# Lab 1 : Bacterial genome assembly
-
 There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. 
 
 A typical V. cholerae genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with 3,885 annotated genes. 
