@@ -8,6 +8,8 @@ A typical _V. cholerae_ genome is organized into two circular chromosomes with a
 Massive amounts of Illumina, Pacbio, 454, Sanger, and other data are stored in the Sequence Read Archive (SRA). Whenever you publish a paper that generates sequence data, you should always submit it to a public repository like SRA so that it safely remains in the public domain. The SRA developers maintain a set of tools to quickly let a user download sequence data that is archived in the SRA. First, download a subset of paired end 50nt Illumina whole genome shotgun V. cholerae reads generated at the Center for Disease Control using the SRA “fastq-dump” program. Go ahead and log onto an interactive node, too, since we don't want to crush the head node.
 
     qlogin
+    mkdir Vcholerae_genome   #go ahead and make a new directory for this project
+    cd Vcholerae_genome/
     /usr/local/sra/latest/bin/fastq-dump --split-files ERR632095
 
 When downloading paired-end data, the --split-files flag separates the forward and reverse reads into two fastq files. If you don't use that flag, you get a single interleaved fastq file.
@@ -36,10 +38,18 @@ SPAdes is a cutting-edge genome assembler that specializes in leveraging multipl
 
 https://wiki.gacrc.uga.edu/wiki/SPAdes
 
+In your command-line text editor of choice (nano, pico, vim, emacs, etc), create a bash shell submission script. I named mine "run_spades.sh". The *.sh ending is not necessary, but it is good practice, since we are writing this simple script in the bash language.
+
     #!/bin/bash
     export LD_LIBRARY_PATH=/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
     python2.7 /usr/local/spades/latest/bin/spades.py --pe1-1 ERR632095_1.fastq --pe1-2 ERR632095_2.fastq --pacbio Vcholerae_ElTor.pacbio.fastq --threads 2 -m 12 -o Vcholera_spades
 
+Then submit your job by typing this on the command line:
+    qsub -q rcc-30d -pe thread 2 ./run_spades.sh
+
+This assembly will take around XX minutes to finish.
+
+### Bacterial genome annotation using BASys
 
 
 
