@@ -6,12 +6,18 @@ Today's lab will be a "choose your own adventure" based on your personal researc
 
 ## _De novo_ transcriptome assembly
 
-You have formed a collaboration with an orchid biologist who studies the "bee orchid", _Ophrys apifera_, which is an incredible example of mimicry. The bee orchid mimics the coloration and scent of a bee species that pollinates it. Male bees will attempt to copulate with the orchid, confusingly thinking that it is a female bee. The male bees unsuspectingly collect pollen on their bodies, move on to another flower, attempt to copulate it, and ultimately pollinate it.
+You have formed a collaboration with an orchid biologist who studies the "bee orchid", _Ophrys apifera_, which is an incredible example of mimicry. The bee orchid mimics the coloration and scent of a bee species that pollinates it. Male bees will attempt to copulate with the orchid, confusingly thinking that it is a female bee. The male bees unsuspectingly collect pollen on their bodies, move on to another flower, attempt to copulate it, and ultimately pollinate it. Your collaborator wants to identify candidate genes that are potentially responsible for this coloration and scent variation, so he generated a small amount of RNAseq data to assemble and annotate expressed transcripts.
+
 ![](https://thmcf.files.wordpress.com/2013/06/bee-orchid-imc-3702.jpg) 
 
-For the sake of time, you do not have to assemble a transcriptome today if you would rather focus on the downstream steps. Here is a walkthrough of how I assembled this one, though, if you would like to learn.
+For the sake of time, you do not have to assemble a transcriptome today if you would rather focus on the downstream steps. Here is a walkthrough of how I assembled this one, though, if you would like to follow along and learn.
 
 1) Download paired-end 75nt RNAseq reads from SRA
 
     /usr/local/sra/latest/bin/fastq-dump --split-files SRR609403
 
+2) Run FASTQC and check the quality of the reads
+
+3) Run Trinity to _de novo_ assemble the transcriptome
+
+Conveniently, Trinity has a lot of built-in features that will save you time. For instance, it can run Trimmomatic to clean your RNAseq data of adapter contamination and poor quality bases at the 3' ends of reads.
