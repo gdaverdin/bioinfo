@@ -13,5 +13,6 @@ For the sake of time, you will not assemble a transcriptome today. Here is a wal
 
 * Download paired-end 75nt RNAseq reads from SRA
 
+
     /usr/local/sra/latest/bin/fastq-dump --split-files SRR609403
 
