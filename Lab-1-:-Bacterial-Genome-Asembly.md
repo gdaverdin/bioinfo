@@ -82,3 +82,5 @@ An assembled genome isn't very valuable to us without a set of gene annotations,
 1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the approximate coverage of Illumina data that you downloaded and used in the assembly (example: nearly 22X coverage).
 
 2) Run the calculate_N50.pl script. What is your assembled scaffold N50? 
+
+3) Write a paragraph interpreting the quality of your genome assembly. What other metrics or analyses would you use to determine whether your assembly is "good"?
