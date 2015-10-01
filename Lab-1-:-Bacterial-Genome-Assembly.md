@@ -65,6 +65,8 @@ qsub is a command that submits a job to the cluster to be prioritized and run on
 
 This assembly took me 42 minutes to finish. Before you leave lab, you should get this assembly started. 
 
+### Calculate assembly statistics
+
 To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
 
     wget http://jlmwiki.plantbio.uga.edu/~aharkess/calculate_N50.pl
