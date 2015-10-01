@@ -1,4 +1,4 @@
-There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the Center for Disease Control (CDC) to _de novo_ assemble and annotate this novel, rapidly evolving strain that is inducing massive panic as the infection spreads. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and longer Pacbio reads.
+There has been a deadly outbreak of a new strain of the Vibrio cholerae bacterium, known to cause cholera. You have been contracted by the Center for Disease Control (CDC) to _de novo_ assemble and annotate this novel, rapidly evolving strain that is causing mass panic as the infection spreads. The CDC has generated whole genome shotgun data using Illumina paired-end 50nt reads (PE50) and longer Pacbio reads, but a government shutdown has forced all bioinformaticians to turn off laboratory computers.
 
 All you know is that a typical _V. cholerae_ genome is organized into two circular chromosomes with a total length of about 4Mbp (4 million base pairs) with ~3,800 annotated genes. 
 
@@ -34,7 +34,7 @@ Download the two html output files (ERR632095_1_fastqc.html and ERR632095_2_fast
 
 ### Hybrid Illumina + Pacbio genome assembly using SPAdes
 
-SPAdes is a cutting-edge genome assembler that specializes in leveraging multiple data types to assemble smaller genomes. Here we will use both Pacbio and Illumina data together to build a better assembly. 
+SPAdes is a cutting-edge genome assembler that specializes in leveraging multiple data types to assemble smaller genomes. Here we will use both Pacbio and Illumina data together to build an assembly for the cholera genome. 
 
 https://wiki.gacrc.uga.edu/wiki/SPAdes
 
@@ -56,6 +56,12 @@ Then submit your job by typing this on the command line:
 
     qsub -q rcc-30d -pe thread 2 ./run_spades.sh
 
+qsub is a command that submits a job to the cluster to be prioritized and run on a node. There are a number of flags you can use with qsub.
+    -q = the queue you want to use. rcc-30d is a high volume, all-purpose set of nodes
+    -pe thread 2 = specificies that we want to multithread and reserve 2 cores
+    ./run_spades.sh = the bash submission script we want to submit. This packet of information contains all the code and information we want to run on the cluster. 
+ 
+
 This assembly took me 42 minutes to finish. Before you leave lab, you should get this assembly started. 
 
 To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
@@ -63,6 +69,7 @@ To calculate some simple and quick statistics on the scaffolds.fasta file (N50, 
     wget http://jlmwiki.plantbio.uga.edu/~aharkess/calculate_N50.pl
 
 You can look at the code (note: this is ugly code) using less or cat, then execute it with
+
     perl calculate_N50.pl scaffolds.fasta
 
 ### Bonus Points: Bacterial genome annotation using Glimmer
@@ -73,4 +80,4 @@ An assembled genome isn't very valuable to us without a set of gene annotations,
 
 1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the approximate coverage of Illumina data that you downloaded and used in the assembly (example: nearly 22X coverage).
 
-2) Run the calculate_N50.pl script. What is your assembled scaffold N50?
+2) Run the calculate_N50.pl script. What is your assembled scaffold N50? 
