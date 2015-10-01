@@ -85,4 +85,6 @@ http://www.ncbi.nlm.nih.gov/genomes/MICROBES/glimmer_3.cgi
 
 2) Run the calculate_N50.pl script. What is your assembled scaffold N50? 
 
-3) Write a paragraph interpreting the quality of your genome assembly. What other metrics or analyses would you use to determine whether your assembly is "good"?
+3) How many genes did you annotate with Glimmer?
+
+4) Write a paragraph interpreting the quality of your genome assembly. What other metrics or analyses would you use to determine whether your assembly is "good"?
