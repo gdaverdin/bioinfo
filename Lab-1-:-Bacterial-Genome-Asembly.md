@@ -44,7 +44,7 @@ Just like with the Illumina data, we want to first check the quality of the Pacb
 
 In your command-line text editor of choice (nano, pico, vim, emacs, etc), create a bash shell submission script. I named mine "run_spades.sh". The *.sh ending is not necessary, but it is good practice, since we are writing this simple script in the bash language. Practice and become proficient at editing text on the command line!
 
-The GACRC will include an example submission script for every program installed on the cluster. There are always some differences in the way programs run and what they require in terms of dependencies. If I had not read the GACRC wiki page for SPAdes, I would NOT have remembered to include the "export LD_LIBRARY_PATH" line and the program would fail immediately. Always, always check the GACRC wiki page first. 
+The GACRC will include an example submission script for every program installed on the cluster. There are always some differences in the way programs run and what they require in terms of dependencies. If I had not read the GACRC wiki page for SPAdes, I would NOT have remembered to include the "export LD_LIBRARY_PATH" line and the program would fail immediately. Always, always check the GACRC wiki page first. Hint: You should read the SPAdes manual now to familiarize yourself with the flags that I use in the submission script below, as you will be assembling more complicated genomes soon.
 
 run_spades.sh:
 
