@@ -62,13 +62,15 @@ To calculate some simple and quick statistics on the scaffolds.fasta file (N50, 
 
     wget http://jlmwiki.plantbio.uga.edu/~aharkess/calculate_N50.pl
 
-You can look at the code (note: this is ugly code) using less or cat.
+You can look at the code (note: this is ugly code) using less or cat, then execute it with
+    perl calculate_N50.pl scaffolds.fasta
 
-### Bacterial genome annotation using BASys
+### Bonus Points: Bacterial genome annotation using Glimmer
 
-An assembled genome isn't very valuable to us without a set of gene annotations, though. To identify where the genes are in your assembly, we can use the BASys webserver. In short, BASys uses Glimmer to predict genes; Glimmer utilizes Hidden Markov Models (HMMs) for microbial genes to predict their position in a query genome. When your assembly finishes, download the scaffolds.fasta file and start an annotation run on the BASys server using default settings.
+An assembled genome isn't very valuable to us without a set of gene annotations, though. To identify where the genes are in your assembly, we can use the BASys webserver or an NCBI portal that runs Glimmer. In short, Glimmer utilizes Hidden Markov Models (HMMs) from a "training" set of genes to ideally pick the positions of all genes in a query genome. When your assembly finishes, download the scaffolds.fasta file and start an annotation run on the BASys server using default settings.
 
 # Homework (due XX)
 
 1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the approximate coverage of Illumina data that you downloaded and used in the assembly (example: nearly 22X coverage).
-2) What is your assembled scaffold N50?
+
+2) Run the calculate_N50.pl script. What is your assembled scaffold N50?
