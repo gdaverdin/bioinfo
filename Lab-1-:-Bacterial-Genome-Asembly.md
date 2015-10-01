@@ -73,7 +73,7 @@ You can look at the code (note: this is ugly code) using less or cat, then execu
 
     perl calculate_N50.pl scaffolds.fasta
 
-### Bonus Points: Bacterial genome annotation using Glimmer
+### Bacterial genome annotation using Glimmer
 
 An assembled genome isn't very valuable to us without a set of gene annotations, though. To identify where the genes are in your assembly, we can use the BASys webserver or an NCBI portal that runs Glimmer. In short, Glimmer utilizes Hidden Markov Models (HMMs) from a "training" set of genes to ideally pick the positions of all genes in a query genome. When your assembly finishes, download the scaffolds.fasta file and start an annotation run on the BASys server using default settings.
 
