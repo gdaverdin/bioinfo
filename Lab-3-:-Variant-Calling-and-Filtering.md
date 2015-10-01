@@ -8,4 +8,8 @@ bwa-mem is a workhorse in the alignment world. It balances speed with alignment 
 
 samtools is a critical set of tools for manipulating, filtering, and converting .sam/.bam alignment files.
 
+## Calling SNPs and indels with samtools and bcftools
+
+While the GATK pipeline is often a preferred
+
 ## Using SnpEff to annotate variants
