@@ -57,6 +57,7 @@ Then submit your job by typing this on the command line:
     qsub -q rcc-30d -pe thread 2 ./run_spades.sh
 
 qsub is a command that submits a job to the cluster to be prioritized and run on a node. There are a number of flags you can use with qsub.
+
     -q = the queue you want to use. rcc-30d is a high volume, all-purpose set of nodes
     -pe thread 2 = specificies that we want to multithread and reserve 2 cores
     ./run_spades.sh = the bash submission script we want to submit. This packet of information contains all the code and information we want to run on the cluster. 
