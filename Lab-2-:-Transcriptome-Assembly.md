@@ -11,8 +11,7 @@ You have formed a collaboration with an orchid biologist who studies the "bee or
 
 For the sake of time, you will not assemble a transcriptome today. Here is a walkthrough of how I assembled one for you, though.
 
-* Download paired-end 75nt RNAseq reads from SRA
-
+1) Download paired-end 75nt RNAseq reads from SRA
 
     /usr/local/sra/latest/bin/fastq-dump --split-files SRR609403
 
