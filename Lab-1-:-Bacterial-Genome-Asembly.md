@@ -40,6 +40,8 @@ https://wiki.gacrc.uga.edu/wiki/SPAdes
 
 Just like with the Illumina data, we want to first check the quality of the Pacbio data. I have combined SRA data from several SMRT cells into one fastq file for you; copy this fastq file into your working directory. Run FASTQC again on this single fastq file of Pacbio reads.
 
+    /home/student/binf4550/data/01.GenomeAssembly/Vcholerae_ElTor.pacbio.fastq
+
 In your command-line text editor of choice (nano, pico, vim, emacs, etc), create a bash shell submission script. I named mine "run_spades.sh". The *.sh ending is not necessary, but it is good practice, since we are writing this simple script in the bash language. Practice and become proficient at editing text on the command line!
 
 The GACRC will include an example submission script for every program installed on the cluster. There are always some differences in the way programs run and what they require in terms of dependencies. If I had not read the GACRC wiki page for SPAdes, I would NOT have remembered to include the "export LD_LIBRARY_PATH" line and the program would fail immediately. Always, always check the GACRC wiki page first. 
@@ -58,7 +60,7 @@ This assembly took me 42 minutes to finish. Before you leave lab, you should get
 
 To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
 
-    wget http://jlmlab.uga.edu/~aharkess/calculate_N50.pl
+    wget http://jlmwiki.plantbio.uga.edu/~aharkess/calculate_N50.pl
 
 You can look at the code (note: this is ugly code) using less or cat.
 
