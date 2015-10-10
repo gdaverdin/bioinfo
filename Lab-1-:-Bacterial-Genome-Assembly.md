@@ -44,7 +44,9 @@ Just like with the Illumina data, we want to first check the quality of the Pacb
 
 In your command-line text editor of choice (nano, pico, vim, emacs, etc), create a bash shell submission script. I named mine "run_spades.sh". The *.sh ending is not necessary, but it is good practice, since we are writing this simple script in the bash language. Practice and become proficient at editing text on the command line!
 
-The GACRC will include an example submission script for every program installed on the cluster. There are always some differences in the way programs run and what they require in terms of dependencies. If I had not read the GACRC wiki page for SPAdes, I would NOT have remembered to include the "export LD_LIBRARY_PATH" line and the program would fail immediately. Always, always check the GACRC wiki page first. Hint: You should read the SPAdes manual now to familiarize yourself with the flags that I use in the submission script below, as you will be assembling more complicated genomes soon.
+The GACRC will include an example submission script for every program installed on the cluster. There are always some differences in the way programs run and what they require in terms of dependencies. If I had not read the GACRC wiki page for SPAdes, I would NOT have remembered to include the "export LD_LIBRARY_PATH" line and the program would fail immediately. Always, always check the GACRC wiki page first. The "export LD_LIBRARY_PATH" line gives the full path to a set of special, necessary libraries that are not defaults. SPAdes will search this path for needed libraries before resorting to the default paths where libraries are stored.
+
+Hint: You should read the SPAdes manual now to familiarize yourself with the flags that I use in the submission script below, as you will be assembling more complicated genomes soon.
 
 run_spades.sh:
 
@@ -67,7 +69,7 @@ This assembly took me 42 minutes to finish. Before you leave lab, you should get
 
 ### Calculate assembly statistics
 
-To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
+Wait until your assembly has finished. To calculate some simple and quick statistics on the scaffolds.fasta file (N50, Total length, GC%) I have placed a perl script on my lab server. To fetch it, you can use the wget command. wget is a nifty way to download files from the internet onto the cluster. 
 
     wget http://jlmwiki.plantbio.uga.edu/~aharkess/calculate_N50.pl
 
@@ -81,12 +83,12 @@ An assembled genome isn't very valuable to us without a set of gene annotations,
 
 http://www.ncbi.nlm.nih.gov/genomes/MICROBES/glimmer_3.cgi
 
-# Homework (due XX)
+# Homework (due 10/19)
 
 1) Assuming a 4.0 megabase (Mb) _V. cholerae_ genome, calculate the approximate coverage of Illumina data that you downloaded and used in the assembly (example: nearly 22X coverage).
 
 2) Run the calculate_N50.pl script. What is your assembled scaffold N50? 
 
-3) How many genes did you annotate with Glimmer?
+3) How many genes did you annotate with Glimmer? Google how to use the unix command "grep -c" to count things, and include your command in your answer. 
 
 4) Write a paragraph interpreting the quality of your genome assembly. What other metrics or analyses would you use to determine whether your assembly is "good"?
