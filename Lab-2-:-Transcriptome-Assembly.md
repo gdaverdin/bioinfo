@@ -18,6 +18,9 @@ For the sake of time, you do not have to assemble a transcriptome today if you w
 
 2) Run FASTQC and check the quality of the reads
 
+    /usr/local/fastqc/latest/fastqc SRR609403_1.fastq SRR609403_2.fastq
+
 3) Run Trinity to _de novo_ assemble the transcriptome
 
 Conveniently, Trinity has a lot of built-in features that will save you time. For instance, it can run Trimmomatic to clean your RNAseq data of adapter contamination and poor quality bases at the 3' ends of reads.
+
