@@ -38,6 +38,16 @@ and submit this job to the rcc-30d queue, requesting 2 threads (because we asked
 
 You have isolated RNA and generating sequencing libraries from brain and adrenal gland tissues to understand what genes are differentially expressed between these two tissue types. For speed, we will be working with just a small subset of data that maps to a small region of chromosome 19. I have placed a link to the RNAseq data, the human genome chromosome 19, and the human genome gene models here:
 
+http://jlmwiki.plantbio.uga.edu/~aharkess/human_rnaseq.tar.bz2
+
+Use wget to download this data. It is compressed using bzip2 (hence, the .bz2 ending) in a tarball (.tar). To decompress it, you can use the command:
+
+    tar -xjvf human_rnaseq.tar.bz2
+
+    -x = extract
+    -j = file has been compressed with bzip
+    -v = be verbose. tell me what you're extracting as you do it
+    -f = the file to extract
 
 First, you need to align RNAseq reads to the genome using Tophat2. Tophat2 requires that the reference genome be indexed for quick searching. We can index the genome using "bowtie2-build". Make sure you're on an interactive node before you begin. Normally I would submit this command using a submission script to the queue, but since this is so small, it won't take more than a minute or two. Look at the help page for bowtie2-build:
 
@@ -109,5 +119,4 @@ Use grep to identify the differentially expressed gene. (Hint: you are searching
 1) What gene is differentially expressed between brain and adrenal tissue?
 
 2) What is the fundamental flaw in this reference-based differential expression analysis, and how would you have redesigned the experiment? Be specific.
-
 
