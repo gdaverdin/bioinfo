@@ -96,4 +96,11 @@ Cuffdiff produces a variety of output:
     -rw-rw---- 1 aharkess jlmlab  81K Oct 19 15:56 genes.read_group_tracking
     -rw-rw---- 1 aharkess jlmlab  207 Oct 19 15:56 read_groups.info
     -rw-rw---- 1 aharkess jlmlab  206 Oct 19 15:56 run.info
-    -rw-rw---- 1 aharkess jlmlab   53 Oct 19 15:56 bias_params.info> 
+    -rw-rw---- 1 aharkess jlmlab   53 Oct 19 15:56 bias_params.info
+
+
+A full explanation of each of these files can be found in the manual (http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/#cuffdiff-output-files). Differentially expressed genes at a False Discovery Rate (FDR) < 0.05 are found in the "gene_exp.diff" file. The last column in this file, titled "significance" is a yes/no boolean where "yes" means the gene is differentially expressed, and "no" means the gene is NOT differentially expressed between the two conditions. 
+
+Use grep to identify the differentially expressed gene. (Hint: you are searching for a match to the word "yes". Use Google to learn how to use grep to extract lines that have a match for some string)
+
+
