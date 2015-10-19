@@ -36,4 +36,19 @@ and submit this job to the rcc-30d queue, requesting 2 threads (because we asked
 
 ## Reference-based alignment and differential expression
 
-You have isolated RNA and generating sequencing libraries from brain and adrenal gland tissues to understand what genes are differentially expressed between these two tissue types. I have placed a link to the 
+You have isolated RNA and generating sequencing libraries from brain and adrenal gland tissues to understand what genes are differentially expressed between these two tissue types. For speed, we will be working with just a small subset of data that maps to a small region of chromosome 19. I have placed a link to the RNAseq data, the human genome chromosome 19, and the human genome gene models here:
+
+
+First, you need to align RNAseq reads to the genome using Tophat2. Tophat2 requires that the reference genome be indexed for quick searching. We can index the genome using "bowtie2-build". Make sure you're on an interactive node before you begin. Normally I would submit this command using a submission script to the queue, but since this is so small, it won't take more than a minute or two. Look at the help page for bowtie2-build:
+
+    /usr/local/bowtie2/latest/bin/bowtie2-build -h
+
+    /usr/local/bowtie2/latest/bin/bowtie2-build chr19.fa chr19.fa
+
+Now that we have an indexed genome, we can run Tophat2 to align our reads to the genome. Remember that Tophat2 is splice-aware, meaning that it will "break" a read to map across exon/intron boundaries when aligning to a genome.
+
+First we check the GACRC page to see if we need to load some special libraries (hint: we do).
+https://wiki.gacrc.uga.edu/wiki/Tophat
+
+    export LD_LIBRARY_PATH=/usr/local/boost/1.54.0/gcc447/lib:/usr/local/gcc/4.7.1/lib:/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
+    /usr/local/tophat/latest/bin/tophat2 chr19.fa Adrenal_1.fq Adrenal_2.fq -o adrenal_tophat
