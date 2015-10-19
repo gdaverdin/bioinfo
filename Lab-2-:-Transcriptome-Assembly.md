@@ -63,3 +63,11 @@ Submit it to the rcc-30d queue using
     qsub -q rcc-30d -cwd ./run_tophat_brainadrenal.sh
 
 Aligned reads are output in a format called SAM/BAM. SAM (Sequence Alignment/Map) is a uniform and accepted format to output read alignment locations and quality scores. BAM is a compressed (binary) format of SAM, which will be smaller in size. Read up on SAM/BAM format and how data is stored here : http://genome.sph.umich.edu/wiki/SAM
+
+Let's look at the end of one of these alignment files. SAMtools is a critically important set of tools that let you view and manipulate SAM/BAM alignment files. "samtools view" is a command that can convert .bam files to .sam very quickly, so that they are human readable. See how I piped the output into the "tail" command, just so I could see the last few lines of it?
+
+    samtools view adrenal_tophat/accepted_hits.bam | tail
+
+Now we can use these two files of aligned reads, one per condition (unreplicated!!), to identify differentially expressed genes. This was only done for the sake of time...do your best to NEVER have unreplicated RNAseq data. 
+
+    /usr/local/cufflinks/latest/bin/cuffdiff USCS_hg19_chr19.genes.gtf brain_tophat/accepted_hits.bam adrenal_tophat/accepted_hits.bam
