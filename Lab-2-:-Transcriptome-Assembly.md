@@ -25,7 +25,6 @@ For the sake of time, you do not have to assemble a transcriptome today if you w
 Conveniently, Trinity has a lot of built-in features that will save you time. For instance, it can run Trimmomatic to clean your RNAseq data of adapter contamination and poor quality bases at the 3' ends of reads.
 
     #!/bin/bash
-    cd working_directory
     export LD_LIBRARY_PATH=/usr/local/gcc/4.7.1/lib:/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
     export PATH=/usr/local/gmap-gsnap/latest/bin/:${PATH}
-    time /usr/local/trinity/2.0.6/Trinity --seqType <string>  [-parameters] --no_version_check
+    time /usr/local/trinity/2.0.6/Trinity --seqType fq --max_memory 10G --left SRR609403_1.fastq --right SRR609403_2.fastq --CPU 2 --trimmomatic --full_cleanup
