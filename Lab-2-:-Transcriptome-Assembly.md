@@ -116,7 +116,7 @@ Use grep to identify the differentially expressed gene. (Hint: you are searching
 
 ## Homework (due 10/27)
 
-1) What gene is differentially expressed between brain and adrenal tissue?
+1) What gene is differentially expressed between brain and adrenal tissue? Include the full "grep" command that you used to extract this data.
 
 2) What is the fundamental flaw in this reference-based differential expression analysis, and how would you have redesigned the experiment? Be specific.
 
