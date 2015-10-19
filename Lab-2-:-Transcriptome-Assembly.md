@@ -47,8 +47,14 @@ First, you need to align RNAseq reads to the genome using Tophat2. Tophat2 requi
 
 Now that we have an indexed genome, we can run Tophat2 to align our reads to the genome. Remember that Tophat2 is splice-aware, meaning that it will "break" a read to map across exon/intron boundaries when aligning to a genome.
 
-First we check the GACRC page to see if we need to load some special libraries (hint: we do).
+First we check the GACRC page to see if we need to load some special libraries (hint: we do). Read the manual to understand which arguments go where. 
+
 https://wiki.gacrc.uga.edu/wiki/Tophat
 
+We're going to align both the Brain and the Adrenal tissues separately. 
+
     export LD_LIBRARY_PATH=/usr/local/boost/1.54.0/gcc447/lib:/usr/local/gcc/4.7.1/lib:/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
-    /usr/local/tophat/latest/bin/tophat2 chr19.fa Adrenal_1.fq Adrenal_2.fq -o adrenal_tophat
+    /usr/local/tophat/latest/bin/tophat2 -o adrenal_tophat chr19.fa Adrenal_1.fq Adrenal_2.fq 
+    /usr/local/tophat/latest/bin/tophat2 -o brain_tophat chr19.fa Brain_1.fq Brain_2.fq 
+
+Aligned reads are output in a format called SAM/BAM. SAM (Sequence Alignment/Map) is a uniform and accepted format to output read alignment locations and quality scores. BAM is a compressed (binary) format of SAM, which will be smaller in size. Read up on SAM/BAM format and how data is stored here : http://genome.sph.umich.edu/wiki/SAM
