@@ -74,7 +74,7 @@ Now we can use these two files of aligned reads, one per condition (unreplicated
 
 Cuffdiff produces a variety of output:
 
--rw-rw---- 1 aharkess jlmlab 114K Oct 19 15:54 var_model.info
+> -rw-rw---- 1 aharkess jlmlab 114K Oct 19 15:54 var_model.info
 -rw-rw---- 1 aharkess jlmlab 190K Oct 19 15:56 isoform_exp.diff
 -rw-rw---- 1 aharkess jlmlab 135K Oct 19 15:56 tss_group_exp.diff
 -rw-rw---- 1 aharkess jlmlab 115K Oct 19 15:56 gene_exp.diff
@@ -96,4 +96,4 @@ Cuffdiff produces a variety of output:
 -rw-rw---- 1 aharkess jlmlab  81K Oct 19 15:56 genes.read_group_tracking
 -rw-rw---- 1 aharkess jlmlab  207 Oct 19 15:56 read_groups.info
 -rw-rw---- 1 aharkess jlmlab  206 Oct 19 15:56 run.info
--rw-rw---- 1 aharkess jlmlab   53 Oct 19 15:56 bias_params.info
+-rw-rw---- 1 aharkess jlmlab   53 Oct 19 15:56 bias_params.info> 
