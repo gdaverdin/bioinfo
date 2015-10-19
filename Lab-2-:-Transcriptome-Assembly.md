@@ -68,6 +68,32 @@ Let's look at the end of one of these alignment files. SAMtools is a critically 
 
     samtools view adrenal_tophat/accepted_hits.bam | tail
 
-Now we can use these two files of aligned reads, one per condition (unreplicated!!), to identify differentially expressed genes. This was only done for the sake of time...do your best to NEVER have unreplicated RNAseq data. 
+Now we can use these two files of aligned reads, one per condition (unreplicated!!), to identify differentially expressed genes using cuffdiff. This was only done for the sake of time...do your best to NEVER have unreplicated RNAseq data. 
 
     /usr/local/cufflinks/latest/bin/cuffdiff USCS_hg19_chr19.genes.gtf brain_tophat/accepted_hits.bam adrenal_tophat/accepted_hits.bam
+
+Cuffdiff produces a variety of output:
+
+-rw-rw---- 1 aharkess jlmlab 114K Oct 19 15:54 var_model.info
+-rw-rw---- 1 aharkess jlmlab 190K Oct 19 15:56 isoform_exp.diff
+-rw-rw---- 1 aharkess jlmlab 135K Oct 19 15:56 tss_group_exp.diff
+-rw-rw---- 1 aharkess jlmlab 115K Oct 19 15:56 gene_exp.diff
+-rw-rw---- 1 aharkess jlmlab 139K Oct 19 15:56 cds_exp.diff
+-rw-rw---- 1 aharkess jlmlab 134K Oct 19 15:56 splicing.diff
+-rw-rw---- 1 aharkess jlmlab 114K Oct 19 15:56 promoters.diff
+-rw-rw---- 1 aharkess jlmlab  96K Oct 19 15:56 cds.diff
+-rw-rw---- 1 aharkess jlmlab 213K Oct 19 15:56 isoforms.fpkm_tracking
+-rw-rw---- 1 aharkess jlmlab 147K Oct 19 15:56 tss_groups.fpkm_tracking
+-rw-rw---- 1 aharkess jlmlab 153K Oct 19 15:56 cds.fpkm_tracking
+-rw-rw---- 1 aharkess jlmlab 128K Oct 19 15:56 genes.fpkm_tracking
+-rw-rw---- 1 aharkess jlmlab  84K Oct 19 15:56 isoforms.count_tracking
+-rw-rw---- 1 aharkess jlmlab  57K Oct 19 15:56 tss_groups.count_tracking
+-rw-rw---- 1 aharkess jlmlab  58K Oct 19 15:56 cds.count_tracking
+-rw-rw---- 1 aharkess jlmlab  47K Oct 19 15:56 genes.count_tracking
+-rw-rw---- 1 aharkess jlmlab 147K Oct 19 15:56 isoforms.read_group_tracking
+-rw-rw---- 1 aharkess jlmlab  99K Oct 19 15:56 tss_groups.read_group_tracking
+-rw-rw---- 1 aharkess jlmlab  98K Oct 19 15:56 cds.read_group_tracking
+-rw-rw---- 1 aharkess jlmlab  81K Oct 19 15:56 genes.read_group_tracking
+-rw-rw---- 1 aharkess jlmlab  207 Oct 19 15:56 read_groups.info
+-rw-rw---- 1 aharkess jlmlab  206 Oct 19 15:56 run.info
+-rw-rw---- 1 aharkess jlmlab   53 Oct 19 15:56 bias_params.info
