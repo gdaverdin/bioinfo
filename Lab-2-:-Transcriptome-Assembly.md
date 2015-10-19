@@ -33,3 +33,7 @@ and submit this job to the rcc-30d queue, requesting 2 threads (because we asked
 
     qsub -q rcc-30d -cwd -pe thread 2 -l mem_total=20G ./run_trinity.sh
 
+
+## Reference-based alignment and differential expression
+
+You have isolated RNA and generating sequencing libraries from brain and adrenal gland tissues to understand what genes are differentially expressed between these two tissue types. I have placed a link to the 
