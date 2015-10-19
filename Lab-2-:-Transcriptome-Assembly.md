@@ -68,7 +68,7 @@ Let's look at the end of one of these alignment files. SAMtools is a critically 
 
     samtools view adrenal_tophat/accepted_hits.bam | tail
 
-Now we can use these two files of aligned reads, one per condition (unreplicated!!), to identify differentially expressed genes using cuffdiff. This was only done for the sake of time...do your best to NEVER have unreplicated RNAseq data. 
+Now we can use these two files of aligned reads, one per condition, to identify differentially expressed genes using cuffdiff. 
 
     /usr/local/cufflinks/latest/bin/cuffdiff USCS_hg19_chr19.genes.gtf brain_tophat/accepted_hits.bam adrenal_tophat/accepted_hits.bam
 
@@ -102,5 +102,12 @@ Cuffdiff produces a variety of output:
 A full explanation of each of these files can be found in the manual (http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/#cuffdiff-output-files). Differentially expressed genes at a False Discovery Rate (FDR) < 0.05 are found in the "gene_exp.diff" file. The last column in this file, titled "significance" is a yes/no boolean where "yes" means the gene is differentially expressed, and "no" means the gene is NOT differentially expressed between the two conditions. 
 
 Use grep to identify the differentially expressed gene. (Hint: you are searching for a match to the word "yes". Use Google to learn how to use grep to extract lines that have a match for some string)
+
+
+## Homework (due 10/27)
+
+1) What gene is differentially expressed between brain and adrenal tissue?
+
+2) What is the fundamental flaw in this reference-based differential expression analysis, and how would you have redesigned the experiment? Be specific.
 
 
