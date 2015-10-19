@@ -28,3 +28,8 @@ Conveniently, Trinity has a lot of built-in features that will save you time. Fo
     export LD_LIBRARY_PATH=/usr/local/gcc/4.7.1/lib:/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
     export PATH=/usr/local/gmap-gsnap/latest/bin/:${PATH}
     time /usr/local/trinity/2.0.6/Trinity --seqType fq --max_memory 10G --left SRR609403_1.fastq --right SRR609403_2.fastq --CPU 2 --trimmomatic --full_cleanup
+
+and submit this job to the rcc-30d queue, requesting 2 threads (because we asked Trinity to use 2 with the --CPU flag), and telling the cluster that were going to use at least 10G of RAM on a node. This will bump us onto a node with 48Gb of RAM. 
+
+    qsub -q rcc-30d -cwd -pe thread 2 -l mem_total=20G ./run_trinity.sh
+
