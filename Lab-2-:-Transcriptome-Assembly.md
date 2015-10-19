@@ -51,10 +51,15 @@ First we check the GACRC page to see if we need to load some special libraries (
 
 https://wiki.gacrc.uga.edu/wiki/Tophat
 
-We're going to align both the Brain and the Adrenal tissues separately. 
+We're going to align both the Brain and the Adrenal tissues separately. Go ahead and make a submission script, call it whatever you like (I named mine "run_tophat_brainadrenal.sh), and format it like this:
 
+    #!/bin/bash
     export LD_LIBRARY_PATH=/usr/local/boost/1.54.0/gcc447/lib:/usr/local/gcc/4.7.1/lib:/usr/local/gcc/4.7.1/lib64:${LD_LIBRARY_PATH}
     /usr/local/tophat/latest/bin/tophat2 -o adrenal_tophat chr19.fa Adrenal_1.fq Adrenal_2.fq 
     /usr/local/tophat/latest/bin/tophat2 -o brain_tophat chr19.fa Brain_1.fq Brain_2.fq 
+
+Submit it to the rcc-30d queue using 
+
+    qsub -q rcc-30d -cwd ./run_tophat_brainadrenal.sh
 
 Aligned reads are output in a format called SAM/BAM. SAM (Sequence Alignment/Map) is a uniform and accepted format to output read alignment locations and quality scores. BAM is a compressed (binary) format of SAM, which will be smaller in size. Read up on SAM/BAM format and how data is stored here : http://genome.sph.umich.edu/wiki/SAM
