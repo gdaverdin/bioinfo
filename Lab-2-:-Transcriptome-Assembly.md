@@ -33,6 +33,8 @@ and submit this job to the rcc-30d queue, requesting 2 threads (because we asked
 
     qsub -q rcc-30d -cwd -pe thread 2 -l mem_total=20G ./run_trinity.sh
 
+You can find my assembled transcriptome here:
+    /home/student/binf4550/data/02.TranscriptomeAssembly
 
 ## Reference-based alignment and differential expression
 
