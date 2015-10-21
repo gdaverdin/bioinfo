@@ -5,7 +5,9 @@ For your final project for this class, you have quite a bit of freedom, but the 
 * any pitfalls you encountered
 * a summary of your results and conclusions
 
- and Some examples include:
+
+
+Some examples include:
 
 * Assembling a _de novo_ transcriptome from an SRA experiment, annotating the transcripts, and quantifying FPKMs for each gene. Extracting interesting genes for a biological question. 
 * 
