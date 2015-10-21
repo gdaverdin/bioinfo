@@ -10,8 +10,8 @@ BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is
 
 samtools is a critical set of tools for manipulating, filtering, and converting .sam/.bam alignment files.
 
-## Calling SNPs and indels with samtools and bcftools
+## Calling SNPs and indels with the GATK Unified Haplotyper
 
-While the GATK pipeline is often a preferred
+
 
 ## Using SnpEff to annotate variants
