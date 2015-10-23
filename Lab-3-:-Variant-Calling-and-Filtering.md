@@ -42,6 +42,8 @@ But we have to use the path to bwa on our cluster. Remember, on the zcluster, pr
 
 SAM is big. Converting to BAM right away saves us some some valuable hard drive space. Then we need to sort every read by its alignment coordinate relative to the reference.
 
+
+
 ## Calling SNPs and indels with the GATK Unified Haplotyper
 
 
