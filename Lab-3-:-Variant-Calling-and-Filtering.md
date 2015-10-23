@@ -1,10 +1,25 @@
-You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer Research Institute. Your first task is to analyze a 30X whole genome shotgun resequence for a 45 year old female individual that has developed breast cancer. Breast cancer is currently the most common type of cancer in female humans, so clinical diagnostics must be fast and accurate. There is a single, genic mutation in this individual that leads to a premature stop codon -- your job is to find it. 
+You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer Research Institute. Your first task is to analyze BRCA1 amplicon resequence for a 45 year old female individual that has developed breast cancer. Breast cancer is currently the most common type of cancer in female humans, so clinical diagnostics must be fast and accurate. Your job is to identify any mutations and characterize their potential outcomes.
 
-## Download whole genome shotgun reads
+You will be using the GATK pipeline and best practices to align your reads and call SNPs. Since this dataset is so small, for the sake of time, we can run this entire analysis on the interactive node without creating submission scripts. Just enter the commands, do not create a submission script and use qsub. 
+
+## Download amplicon reads
+I have simulated paired-end reads from a breast cancer-positive individual and placed them in our lab directory. They called Brca1Reads_0.1.fastq and Brca1Reads_0.2.fastq. Get on an interactive node and copy them into your directory on the cluster. 
+
+    /home/student/binf4550/data/03.VariantCalling
 
 ## Aligning shotgun reads to the human genome with bwa-mem
+For this section, I am following this page of the best practices guide : https://www.broadinstitute.org/gatk/guide/article?id=2799
 
-BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
+GATK is very particular. It requires that each sequencing library have metadata attached to it. These metadata will end up in our .bam alignments, which is nifty for a lot of downstream reasons. First we have to Compose the read group identifier in the following format:
+
+    @RG\tID:group1\tSM:sample1\tPL:illumina\tLB:lib1\tPU:unit1 
+    where the \t stands for the tab character.
+
+Now we can run bwa-mem. BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
+
+    bwa mem -M -R ’<read group info>’ -p reference.fa raw_reads.fq > aligned_reads.sam
+
+
 
 ## Using samtools to manipulate alignment files
 
