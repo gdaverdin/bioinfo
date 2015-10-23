@@ -34,13 +34,13 @@ Here's what the manual tells us to run:
 
     bwa mem -M -R ’<read group info>’ -p reference.fa raw_reads.fq > aligned_reads.sam
 
-But we have to use the path the bwa on our cluster. Remember, programs are kept in /usr/local/:
+But we have to use the path to bwa on our cluster. Remember, on the zcluster, programs are kept in /usr/local/:
 
     /usr/local/bwa/latest/bwa mem -M -R '@RG\tID:group1\tSM:sample1\tPL:illumina\tLB:lib1\tPU:unit1' chr17.fa Brca1Reads_0.1.fastq Brca1Reads_0.2.fastq > Brca1Reads_aligned.raw.sam
 
-## Using samtools to manipulate alignment files
+## Convert SAM -> BAM, sort, and mark PCR duplicates
 
-samtools is a critical set of tools for manipulating, filtering, and converting .sam/.bam alignment files.
+SAM is big. Converting to BAM right away saves us some some valuable hard drive space. Then we need to sort every read by its alignment coordinate relative to the reference.
 
 ## Calling SNPs and indels with the GATK Unified Haplotyper
 
