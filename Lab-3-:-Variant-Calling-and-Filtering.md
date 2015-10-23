@@ -10,10 +10,19 @@ I have simulated paired-end reads from a breast cancer-positive individual and p
 ## Aligning shotgun reads to the human genome with bwa-mem
 For this section, I am following this page of the best practices guide : https://www.broadinstitute.org/gatk/guide/article?id=2799
 
-GATK is very particular. It requires that each sequencing library have metadata attached to it. These metadata will end up in our .bam alignments, which is nifty for a lot of downstream reasons. First we have to Compose the read group identifier in the following format:
+GATK is very particular. It requires that each sequencing library have metadata attached to it. These metadata will end up in our .bam alignments, which is nifty for a lot of downstream reasons. First we have to compose a short string of this metadata, called the read group identifier, in the following format:
 
     @RG\tID:group1\tSM:sample1\tPL:illumina\tLB:lib1\tPU:unit1 
     where the \t stands for the tab character.
+
+    @RG = an indicator that this line is a read group identifier line
+    ID = a group ID
+    SM = sample ID
+    PL = platform (Illumina, 454, Ion torrent, Pacbio)
+    LB = library number (can have multiple libraries for a given individual)
+    PU = platform unit (for big facilities that have multiple sequencers)
+
+We can just use the default @RG string above. 
 
 Now we can run bwa-mem. BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
 
