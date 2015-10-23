@@ -31,6 +31,7 @@ Then we have to index the reference genome (in this case, were just looking at c
 Now we can run bwa-mem. BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
 
 Here's what the manual tells us to run:
+
     bwa mem -M -R ’<read group info>’ -p reference.fa raw_reads.fq > aligned_reads.sam
 
 But we have to use the path the bwa on our cluster. Remember, programs are kept in /usr/local/:
