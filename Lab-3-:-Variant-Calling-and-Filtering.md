@@ -24,11 +24,18 @@ GATK is very particular. It requires that each sequencing library have metadata 
 
 We can just use the default @RG string above. 
 
+Then we have to index the reference genome (in this case, were just looking at chromosome 17). 
+
+    /usr/local/bwa/latest/bwa index chr17.fa
+
 Now we can run bwa-mem. BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
 
+Here's what the manual tells us to run:
     bwa mem -M -R ’<read group info>’ -p reference.fa raw_reads.fq > aligned_reads.sam
 
+But we have to use the path the bwa on our cluster. Remember, programs are kept in /usr/local/:
 
+    /usr/local/bwa/latest/bwa mem -M -R '@RG\tID:group1\tSM:sample1\tPL:illumina\tLB:lib1\tPU:unit1' chr17.fa Brca1Reads_0.1.fastq Brca1Reads_0.2.fastq > Brca1Reads_aligned.raw.sam
 
 ## Using samtools to manipulate alignment files
 
