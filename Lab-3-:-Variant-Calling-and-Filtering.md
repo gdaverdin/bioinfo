@@ -40,9 +40,21 @@ But we have to use the path to bwa on our cluster. Remember, on the zcluster, pr
 
 ## Convert SAM -> BAM, sort, and mark PCR duplicates
 
-SAM is big. Converting to BAM right away saves us some some valuable hard drive space. Then we need to sort every read by its alignment coordinate relative to the reference.
+SAM is big. Converting to BAM right away saves us some some valuable hard drive space. Then we need to sort every read by its alignment coordinate relative to the reference so that it is easily searchable. Afterwards, we want to filter out reads derived from PCR duplicates. These are not biologically informative reads, so we don't want them to contribute as depth evidence for a SNP.
 
+Picard is an incredible set of tools to manipulate sequence and analysis formats. Let's see what all it can do
 
+    java -jar /usr/local/picard/latest/dist/picard.jar -h
+
+Now let's sort our .sam file using picard and convert it to bam.
+
+    java -jar /usr/local/picard/latest/dist/picard.jar SortSam INPUT=Brca1Reads_aligned.raw.sam OUTPUT=Brca1Reads_aligned.sorted.bam SORT_ORDER=coordinate
+
+And then mark duplicate reads so they don't get counted during SNP calling.
+
+    java -jar /usr/local/picard/latest/dist/picard.jar MarkDuplicates INPUT=Brca1Reads_aligned.sorted.bam OUTPUT=Brca1Reads_aligned.sorted.dedup.bam METRICS_FILE=metrics.txt
+
+    ava -jar /usr/local/picard/latest/dist/picard.jar BuildBamIndex INPUT=Brca1Reads_aligned.sorted.dedup.bam
 
 ## Calling SNPs and indels with the GATK Unified Haplotyper
 
