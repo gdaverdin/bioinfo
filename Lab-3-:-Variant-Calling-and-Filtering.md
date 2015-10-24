@@ -75,6 +75,6 @@ Then do the realignment.
 
 ## Calling SNPs and indels with the GATK Unified Haplotyper
 
-
+    java -jar /usr/local/gatk/latest/GenomeAnalysisTK.jar -T HaplotypeCaller -R chr17.fa -I Brca1Reads_aligned.sorted.dedup.realigned.bam --genotyping_mode DISCOVERY -stand_emit_conf 10 -stand_call_conf 30 -o Brca_raw_variants.vcf
 
 ## Using SnpEff to annotate variants
