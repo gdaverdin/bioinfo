@@ -46,15 +46,17 @@ Picard is an incredible set of tools to manipulate sequence and analysis formats
 
     java -jar /usr/local/picard/latest/dist/picard.jar -h
 
-Now let's sort our .sam file using picard and convert it to bam.
+Now let's **sort** our .sam file using picard and convert it to bam.
 
     java -jar /usr/local/picard/latest/dist/picard.jar SortSam INPUT=Brca1Reads_aligned.raw.sam OUTPUT=Brca1Reads_aligned.sorted.bam SORT_ORDER=coordinate
 
-And then mark duplicate reads so they don't get counted during SNP calling.
+And then **mark duplicate reads** so they don't get counted during SNP calling.
 
     java -jar /usr/local/picard/latest/dist/picard.jar MarkDuplicates INPUT=Brca1Reads_aligned.sorted.bam OUTPUT=Brca1Reads_aligned.sorted.dedup.bam METRICS_FILE=metrics.txt
 
-    ava -jar /usr/local/picard/latest/dist/picard.jar BuildBamIndex INPUT=Brca1Reads_aligned.sorted.dedup.bam
+Now we have to **index** our sorted, duplicate-marked .bam alignment file.
+
+    java -jar /usr/local/picard/latest/dist/picard.jar BuildBamIndex INPUT=Brca1Reads_aligned.sorted.dedup.bam
 
 ## Calling SNPs and indels with the GATK Unified Haplotyper
 
