@@ -77,4 +77,7 @@ Then do the realignment.
 
     java -jar /usr/local/gatk/latest/GenomeAnalysisTK.jar -T HaplotypeCaller -R chr17.fa -I Brca1Reads_aligned.sorted.dedup.realigned.bam --genotyping_mode DISCOVERY -stand_emit_conf 10 -stand_call_conf 30 -o Brca_raw_variants.vcf
 
+Remember that this is an unfiltered set of SNPs. We can apply some hard filters to our variants for depth, call quality. This is a difficult thing to teach -- you'll need to read about this yourself and cater variant filtration to your own experiment (https://www.broadinstitute.org/gatk/guide/article?id=2806). 
+
 ## Using SnpEff to annotate variants
+
