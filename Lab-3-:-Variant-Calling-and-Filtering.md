@@ -60,7 +60,7 @@ Now we have to **index** our sorted, duplicate-marked .bam alignment file.
 
 ## Perform local re-alignments around putative indel sites
 
-Almost ready. Lastly we need to realign indel sites. Remember that we need to do small global alignments here to correct for alignment issues around gap opening and extension sites. This will ensure that we get true indel calls instead of spurious false-positive SNPs . Index the genome real quick:
+Almost ready. Lastly we need to realign indel sites. Remember that we need to do small local alignments here to correct for alignment issues around gap opening and extension sites. This will ensure that we get true indel calls instead of spurious false-positive SNPs . Index the genome real quick:
 
     java -jar /usr/local/picard/latest/dist/picard.jar CreateSequenceDictionary REFERENCE=chr17.fa OUTPUT=chr17.dict
 
