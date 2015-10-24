@@ -64,7 +64,12 @@ Almost ready. Lastly we need to realign indel sites. Remember that we need to do
 
     java -jar /usr/local/picard/latest/dist/picard.jar CreateSequenceDictionary REFERENCE=chr17.fa OUTPUT=chr17.dict
 
+Then create a list of putative indel sites that need to be realigned.
+
     java -jar /usr/local/gatk/latest/GenomeAnalysisTK.jar -T RealignerTargetCreator -R chr17.fa -I Brca1Reads_aligned.sorted.dedup.bam -o targets_for_realignment.list
+
+Then do the realignment.
+
     java -jar /usr/local/gatk/latest/GenomeAnalysisTK.jar -T IndelRealigner -R chr17.fa -I Brca1Reads_aligned.sorted.dedup.bam -targetIntervals targets_for_realignment.list -o Brca1Reads_aligned.sorted.dedup.realigned.bam
 
 
