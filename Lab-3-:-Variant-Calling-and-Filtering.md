@@ -3,9 +3,11 @@ You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer 
 You will be using the GATK pipeline and best practices to align your reads and call SNPs. Since this dataset is so small, for the sake of time, we can run this entire analysis on the interactive node without creating submission scripts. Just enter the commands, do not create a submission script and use qsub. 
 
 ## Download amplicon reads
-I have simulated paired-end reads from a breast cancer-positive individual and placed them in our lab directory. They called Brca1Reads_0.1.fastq and Brca1Reads_0.2.fastq. Get on an interactive node and copy them into your directory on the cluster. 
+I have simulated paired-end reads from a breast cancer-positive individual and placed them in our lab directory. They called Brca1Reads_0.1.fastq and Brca1Reads_0.2.fastq. I have also placed a fasta file for the human genome chromosome 17 (chr17.fa) and a .gtf of the UCSC gene models for this chromosome (Hg19.Chr17.UCSC-3.gtf) Get on an interactive node and copy this entire directory into your directory on the cluster. The directory is located here:
 
     /home/student/binf4550/data/03.VariantCalling
+
+If you don't know how to copy the contents of an entire folder into your directory, try to google it before you ask for help. 
 
 ## Aligning shotgun reads to the human genome with bwa-mem
 For this section, I am following this page of the best practices guide : https://www.broadinstitute.org/gatk/guide/article?id=2799
@@ -85,6 +87,7 @@ You have used IGV to visualize your .bam files before. Download the .bam, .bam.b
 
 ![](http://i.imgur.com/ha95pnD.png)
 
+Boy, downloading and visualizing SNPs to figure out if they're in a coding region is kind of a pain. I wonder if we could do this computationally instead of by eye...
 
 ## Homework:
 
