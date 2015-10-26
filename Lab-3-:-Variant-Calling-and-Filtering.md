@@ -1,4 +1,4 @@
-You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer Research Institute. Your first task is to analyze BRCA1 amplicon resequence for a 45 year old female individual that has developed breast cancer. Breast cancer is currently the most common type of cancer in female humans, so clinical diagnostics must be fast and accurate. Your job is to identify any mutations and characterize their potential outcomes.
+You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer Research Institute. DPCK gene amplicon resequence for a 45 year old female individual that has developed pancreatic cancer. Your job is to identify any mutations in this individuals' genes.
 
 You will be using the GATK pipeline and best practices to align your reads and call SNPs. Since this dataset is so small, for the sake of time, we can run this entire analysis on the interactive node without creating submission scripts. Just enter the commands, do not create a submission script and use qsub. 
 
@@ -79,5 +79,10 @@ Then do the realignment.
 
 Remember that this is an unfiltered set of SNPs. We can apply some hard filters to our variants for depth, call quality. This is a difficult thing to teach -- you'll need to read about this yourself and cater variant filtration to your own experiment (https://www.broadinstitute.org/gatk/guide/article?id=2806). 
 
-## Using SnpEff to annotate variants
+## Download and visualize
+
+You have used IGV to visualize your .bam files before. Download the .bam, .bam.bai, chr17.fa, and your .vcf file. You can drag and drop the .bam and .vcf files into the IGV viewer to overlay them. Here is an example of what mine looks like:
+![](http://imgur.com/ha95pnD)
+
+
 
