@@ -1,4 +1,4 @@
-You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer Research Institute. DPCK gene amplicon resequence for a 45 year old female individual that has developed pancreatic cancer. Your job is to identify any mutations in this individuals' genes.
+You have just been hired as a bioinformatician in at the Fred Hutchinson Cancer Research Institute. I have simulated DPCK gene amplicon resequence for a 45 year old female individual that has developed pancreatic and breast cancer. Your job is to identify any mutations in this individuals' genes that may be causal.
 
 You will be using the GATK pipeline and best practices to align your reads and call SNPs. Since this dataset is so small, for the sake of time, we can run this entire analysis on the interactive node without creating submission scripts. Just enter the commands, do not create a submission script and use qsub. 
 
