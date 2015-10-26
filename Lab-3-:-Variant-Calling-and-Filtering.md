@@ -81,8 +81,12 @@ Remember that this is an unfiltered set of SNPs. We can apply some hard filters 
 
 ## Download and visualize
 
-You have used IGV to visualize your .bam files before. Download the .bam, .bam.bai, chr17.fa, and your .vcf file. You can drag and drop the .bam and .vcf files into the IGV viewer to overlay them. Here is an example of what mine looks like:
+You have used IGV to visualize your .bam files before. Download the .bam, .bam.bai, chr17.fa, the .gtf file, and your .vcf file. You can drag and drop the .bam and .vcf files into the IGV viewer to overlay them. Here is an example of what mine looks like:
 
 ![](http://i.imgur.com/ha95pnD.png)
 
+
+## Homework:
+
+1) Are there any coding SNPs or indels? At what position? Use 1-based coordinates. 
 
