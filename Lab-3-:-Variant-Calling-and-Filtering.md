@@ -12,6 +12,8 @@ If you don't know how to copy the contents of an entire folder into your directo
 ## Aligning shotgun reads to the human genome with bwa-mem
 For this section, I am following this page of the best practices guide : https://www.broadinstitute.org/gatk/guide/article?id=2799
 
+Check out the GACRC page for BWA, as well. https://wiki.gacrc.uga.edu/wiki/Burrows-Wheeler_Aligner_%28BWA%29
+
 GATK is very particular. It requires that each sequencing library have metadata attached to it. These metadata will end up in our .bam alignments, which is nifty for a lot of downstream reasons. First we have to compose a short string of this metadata, called the read group identifier, in the following format:
 
     @RG\tID:group1\tSM:sample1\tPL:illumina\tLB:lib1\tPU:unit1 
@@ -30,7 +32,7 @@ Then we have to index the reference genome (in this case, were just looking at c
 
     /usr/local/bwa/latest/bwa index chr17.fa
 
-Now we can run bwa-mem. BWA is the Burrow-Wheelers Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
+Now we can run bwa-mem. BWA is the Burrows-Wheeler Aligner written by alignment guru Heng Li. bwa-mem is a workhorse in the alignment world; it balances speed with alignment sensitivity and accuracy.
 
 Here's what the manual tells us to run:
 
