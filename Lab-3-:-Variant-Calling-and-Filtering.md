@@ -24,7 +24,7 @@ GATK is very particular. It requires that each sequencing library have metadata 
     LB = library number (can have multiple libraries for a given individual)
     PU = platform unit (for big facilities that have multiple sequencers)
 
-We can just use the default @RG string above. 
+We can just use the default @RG string above. This Readgroup (@RG) string becomes particularly important when we have multiple samples to align and analyze. 
 
 Then we have to index the reference genome (in this case, were just looking at chromosome 17). 
 
