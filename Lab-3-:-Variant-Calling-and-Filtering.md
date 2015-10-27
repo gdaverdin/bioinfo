@@ -62,9 +62,10 @@ Now we have to **index** our sorted, duplicate-marked .bam alignment file.
 
 ## Perform local re-alignments around putative indel sites
 
-Almost ready. Lastly we need to realign indel sites. Remember that we need to do small local alignments here to correct for alignment issues around gap opening and extension sites. This will ensure that we get true indel calls instead of spurious false-positive SNPs . Index the genome real quick:
+Almost ready. Lastly we need to realign indel sites. Remember that we need to do small local alignments here to correct for alignment issues around gap opening and extension sites. This will ensure that we get true indel calls instead of spurious false-positive SNPs . Index the genome real quick, once to create a dictionary for GATK, and the other to generate a regular index using samtools faidx:
 
     java -jar /usr/local/picard/latest/dist/picard.jar CreateSequenceDictionary REFERENCE=chr17.fa OUTPUT=chr17.dict
+    samtools faidx chr17.fa
 
 Then create a list of putative indel sites that need to be realigned.
 
