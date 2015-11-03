@@ -39,4 +39,9 @@ Muscle is a good, all-around multiple sequence aligner. Check out the manual pag
 
 2) Aligning sequences with Prank
 
+Prank uses a different alignment algorithm with different penalties for opening and extending gaps.
+
     /usr/local/prank/latest/prank -h
+
+
+What obvious differences did you notice in the time it takes to run both programs? Remember that this is a small alignment. Time matters, sometimes. More importantly, did the two programs produce different alignments? When I want to quickly look at small alignments with a nice color scheme, I keep this page bookmarked: http://www.ebi.ac.uk/Tools/msa/mview/
