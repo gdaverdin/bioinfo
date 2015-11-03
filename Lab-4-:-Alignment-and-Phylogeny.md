@@ -69,6 +69,6 @@ and submit it, making sure to request two threads.
     
     qsub -q rcc-30d -pe thread 2 ./run_raxml.sh
 
-Visualize your tree using Figtree.
+Visualize your tree using Figtree. Use the *bipartitions* tree.
 
 If you finish, run RAxML on your other two alignments and identify if your tree changes based on your alignment differences. 
