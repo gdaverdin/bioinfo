@@ -21,11 +21,15 @@ It makes sense to double-check your files sometimes. I often use the head comman
 
 ![](http://i.imgur.com/BhtJW8n.png)
 
-OK, your first task is to take the cow peptide sequence and use BLAST to identify its closest homolog and annotation. Which flavor of BLAST would you most reasonably use for this scenario?
+OK, your first task is to take the cow peptide sequence and use BLAST to identify its closest homolog and annotation. Use NCBI, Uniprot, whatever you prefer. Which flavor of BLAST would you most reasonably use for this scenario?
 
     blastn, blastp, blastx, tblastn, tblastx ?
 
+Once you know the gene ID, you can continue.
+
 ## Perform multiple sequence alignments with a variety of programs
+
+Multiple sequence alignment is computationally difficult. This has been a developing mathematical and empirical field over the last 20+ years. As with much informatics, there is no single program that will work perfectly for all applications. Some aligners are better with peptides, some better with short sequences, some better with long, some are more "gappy" than others (aka they tend to open and extend gaps more freely).  
 
 1) Aligning sequences with MUSCLE:
 
