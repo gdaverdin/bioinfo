@@ -20,6 +20,7 @@ It makes sense to double-check your files sometimes. I often use the head comman
 ![](http://i.imgur.com/BhtJW8n.png)
 
 OK, your first task is to take the cow peptide sequence and use BLAST to identify its closest homolog and annotation. Which flavor of BLAST would you most reasonably use for this scenario?
+
     blastn, blastp, blastx, tblastn, tblastx ?
 
 ## Perform multiple sequence alignments with a variety of programs
