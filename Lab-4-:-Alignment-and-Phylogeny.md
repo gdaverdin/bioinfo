@@ -10,7 +10,7 @@ Make a new directory (with mkdir) and copy them into your current directory.
 
 These two fasta files are paired, meaning that the cds and peptides correspond to each other. The length of each cds sequence should be 3 times the length of every peptide sequence. How would you use grep to quickly look at the fasta headers in each of these files?
 
-It makes sense to double-check your files sometimes. I often use the head command to look at the first few lines of multiple files.
+It makes sense to double-check your files sometimes. I often use the head command to look at the first few lines of multiple files. In the cds file, the Cow sequence starts with an ATG (start codon) and the in the peptide file, Cow starts with an M (Methionine start codon). Looking good there!
 
 ![](http://i.imgur.com/BhtJW8n.png)
 
