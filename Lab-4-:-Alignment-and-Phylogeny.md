@@ -56,6 +56,8 @@ What obvious differences did you notice in the time it takes to run all three pr
 
 ## Build a peptide gene tree in RAxML
 
+https://wiki.gacrc.uga.edu/wiki/RAxML
+
 Let's use our PASTA alignment (pastajob.marker001.interesting_seqs.pep.aln) to build a gene tree. RAxML is my recommended choice for building maximum likelihood (ML) trees. Here we will use the GTR (General Time Reversible) model of protein substitution with the gamma model of rate heterogeneity (because not all species evolve at the same rate!), running 100 rapid bootstraps. We will use 2 threads.
 
 run_raxml.sh
@@ -66,4 +68,3 @@ run_raxml.sh
 and submit it, making sure to request two threads.
     
     qsub -q rcc-30d -pe thread 2 ./run_raxml.sh
-
