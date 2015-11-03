@@ -47,8 +47,8 @@ Prank uses a different alignment algorithm with different penalties for opening 
 
 PASTA is my favorite of the bunch. It builds on concepts developed in SATE to break large alignments down into small problems and generates Hidden Markov Models for alignment backbones. Specifically, PASTA utilizes transitivity to quickly improve alignments (ie., if A -> B and B -> C, then A must align to C). 
 
-    https://github.com/smirarab/pasta
+https://github.com/smirarab/pasta
 
-python2.7 /usr/local/pasta/latest/run_pasta.py -h
+    python2.7 /usr/local/pasta/latest/run_pasta.py -h
 
 What obvious differences did you notice in the time it takes to run both programs? Remember that this is a small alignment. Time matters, sometimes. More importantly, did the two programs produce different alignments? When I want to quickly look at small alignments with a nice color scheme, I keep this page bookmarked: http://www.ebi.ac.uk/Tools/msa/mview/
