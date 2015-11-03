@@ -51,4 +51,4 @@ https://github.com/smirarab/pasta
 
     python2.7 /usr/local/pasta/latest/run_pasta.py -h
 
-What obvious differences did you notice in the time it takes to run both programs? Remember that this is a small alignment. Time matters, sometimes. More importantly, did the two programs produce different alignments? When I want to quickly look at small alignments with a nice color scheme, I keep this page bookmarked: http://www.ebi.ac.uk/Tools/msa/mview/
+What obvious differences did you notice in the time it takes to run all three programs? Remember that this is a small alignment. Time matters, sometimes. More importantly, did the three programs produce different alignments? When I want to quickly look at small alignments with a nice color scheme, I keep this page bookmarked: http://www.ebi.ac.uk/Tools/msa/mview/
