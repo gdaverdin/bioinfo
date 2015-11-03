@@ -1,4 +1,6 @@
-Today you will align gene sequences from 10 species and build a gene tree. The evolutionary histories of individual genes can be quite different than the evolutionary history of species, though, so your resulting gene tree may or may not match the true species tree. If this type of gene tree/species tree discordance interests you, be sure to check out Coalescent Theory:
+Today you will align gene sequences from 10 species and build a gene tree. 
+
+The evolutionary histories of individual genes can be quite different than the evolutionary history of species, though, so your resulting gene tree may or may not match the true species tree. If this type of gene tree/species tree discordance interests you, be sure to check out Coalescent Theory:
 ![](https://biologos.org/files/resources/dnavariant.png)
 
 There will be one major difference in lab today, though -- you will not be given the exact commands to type on the command line. I will point you to each program and the manual page for you to run. When in doubt, use defaults to begin with, and then google.
@@ -30,3 +32,7 @@ OK, your first task is to take the cow peptide sequence and use BLAST to identif
 Muscle is a good, all-around multiple sequence aligner. Check out the manual page and learn how to use Muscle with default settings. Generate a multiple sequence alignment for the peptide file.
 
     /usr/local/muscle/latest/bin/muscle -h
+
+2) Aligning sequences with Prank
+
+    /usr/local/prank/latest/prank -h
