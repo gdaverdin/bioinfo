@@ -45,7 +45,7 @@ Prank uses a different alignment algorithm with different penalties for opening 
 
 3) Aligning sequences with PASTA
 
-PASTA is my favorite of the bunch. It builds on concepts developed in SATE to break large alignments down into small problems and generates Hidden Markov Models for alignment backbones. Specifically, PASTA utilizes transitivity to quickly improve alignments (ie., if A -> B and B -> C, then A must align to C). 
+PASTA is my current favorite of the bunch. It builds on concepts developed in SATE to break large alignments down into small problems and generates Hidden Markov Models for alignment backbones. Specifically, PASTA utilizes transitivity to quickly improve alignments (ie., if A -> B and B -> C, then A must align to C). 
 
 https://github.com/smirarab/pasta
 
