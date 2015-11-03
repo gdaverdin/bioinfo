@@ -68,3 +68,5 @@ run_raxml.sh
 and submit it, making sure to request two threads.
     
     qsub -q rcc-30d -pe thread 2 ./run_raxml.sh
+
+Visualize your tree using Figtree.
