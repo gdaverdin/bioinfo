@@ -27,6 +27,6 @@ OK, your first task is to take the cow peptide sequence and use BLAST to identif
 
 1) Aligning sequences with MUSCLE:
 
-Muscle is a good, all-around multiple sequence aligner.
+Muscle is a good, all-around multiple sequence aligner. Check out the manual page and learn how to use Muscle with default settings. Generate a multiple sequence alignment for the peptide file.
 
     /usr/local/muscle/latest/bin/muscle -h
