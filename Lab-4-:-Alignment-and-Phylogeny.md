@@ -12,7 +12,7 @@ These two fasta files are paired, meaning that the cds and peptides correspond t
 
 It makes sense to double-check your files sometimes. I often use the head command to look at the first few lines of multiple files.
 
-![](http://imgur.com/lOBgIQ6)
+![](http://i.imgur.com/BhtJW8n.png)
 
 ## Perform multiple sequence alignments with a variety of programs
 
