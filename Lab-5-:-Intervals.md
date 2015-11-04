@@ -23,4 +23,4 @@ We'll start by using bedtools intersect to identify the intersection of two or m
     chr17	hg19_spAnnot	CDS	43107539	43107539	1000.000000	.	2	gene_id "DPCK"; transcript_id "DPCK_dup1";
     chr17	hg19_spAnnot	exon	43107539	43107539	1000.000000	.	.	gene_id "DPCK"; transcript_id "DPCK_dup1";
 
-And look -- there is the answer to last week's lab homework -- the only SNP located in an exon.
+And look -- there is the answer to last week's lab homework -- the only SNP located in an exon. Based on the above picture, add the flag "-wa" and see what happens. Then "-wb" instead. Then "-v". 
