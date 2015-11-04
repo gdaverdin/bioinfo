@@ -12,5 +12,10 @@ Let's see what bedtools can do:
 
 Goal: Which gene models intersect with a SNP that we called?
 
-    /
+    /usr/local/bedtools/latest/bin/bedtools intersect -h
     /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
+
+    aharkess@compute-14-9:/home/student/binf4550/data/05.Intervals$ /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
+    chr17	hg19_spAnnot	CDS	43107539	43107539	1000.000000	.	2	gene_id "DPCK"; transcript_id "DPCK_dup1";
+    chr17	hg19_spAnnot	exon	43107539	43107539	1000.000000	.	.	gene_id "DPCK"; transcript_id "DPCK_dup1";
+
