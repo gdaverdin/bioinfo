@@ -24,7 +24,7 @@ And look -- there is the answer to last week's lab homework -- the only SNP loca
 
 If you wanted to identify every gene model that DIDNT overlap with a SNP, then add "-v". 
 
-## Find the closest SNPs to each exon
+## Find the closest SNP to each exon
 
     /usr/local/bedtools/latest/bin/bedtools closest -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
 
