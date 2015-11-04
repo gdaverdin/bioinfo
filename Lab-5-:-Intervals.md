@@ -42,7 +42,7 @@ But SAM files are big, we should really compress this into .bam before saving it
 
     samtools view -h
 
-Now let's package up this data for our collaborators into a tarball, compressed with the bzip2 algorithm.
+As a relevant aside, now let's package up this data for our collaborators into a tarball, compressed with the bzip2 algorithm.
 
     mkdir data_for_collaborators
     cp DPCK1.bam chr17.fa data_for_collaborators/
