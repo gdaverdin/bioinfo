@@ -55,6 +55,8 @@ Since this dataset was a gene capture enrichment, we might expect variable cover
 
     /usr/local/bedtools/latest/bin/bedtools coverage -a Hg19.Chr17.UCSC-3.exons.gtf -b Brca1Reads_aligned.sorted.dedup.realigned.bam | grep "DPCK"
 
+(See how I piped the output into grep to ONLY select exons from the DPCK gene?)
+
     Default Output:
 	 After each entry in A, reports:
 	   1) The number of features in B that overlapped the A interval.
