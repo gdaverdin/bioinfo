@@ -26,6 +26,8 @@ If you wanted to identify every gene model that DIDNT overlap with a SNP, then a
 
 ## Find the closest SNP to each exon
 
+I would like to know -- for each gene model, what is the closest SNP that we called?
+
     /usr/local/bedtools/latest/bin/bedtools closest -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
 
 Weird. It's throwing an error saying that our .gtf isn't sorted. 
@@ -33,7 +35,7 @@ Weird. It's throwing an error saying that our .gtf isn't sorted.
     Error: Sorted input specified, but the file Hg19.Chr17.UCSC-3.exons.gtf has the following out of order record
     chr17	hg19_spAnnot	exon	131559	131645	1000.000000	.	.	gene_id "zinc finger"; transcript_id "zinc finger";
 
-OK. bedtools can sort .bam files for us. Here's what I did to fix this:
+OK. bedtools can sort .gtf files for us. Here's what I did to fix this:
 
     /usr/local/bedtools/latest/bin/bedtools sort -i Hg19.Chr17.UCSC-3.exons.gtf > Hg19.Chr17.UCSC-3.exons.sort.gtf
 
