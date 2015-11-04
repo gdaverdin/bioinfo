@@ -43,6 +43,8 @@ Then we can run bedtools closest again.
 
     /usr/local/bedtools/latest/bin/bedtools closest -a Hg19.Chr17.UCSC-3.exons.sort.gtf -b Brca_raw_variants.vcf
 
+Redirect the output using > to a file of your choosing. I would probably name it something like "Hg19.Brca_variants.closest.out"
+
 ## Identifying gene models (gtf) that overlap with locations of differentially expressed genes (gtf)
 
 I have placed a gtf file of differentially expressed exons called DifferentiallyExpressedExons.gtf in the directory. Use bedtools intersect to count the number of gene model exons that overlap with differentially expressed exons.
