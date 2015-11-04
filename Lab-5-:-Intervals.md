@@ -49,6 +49,19 @@ Redirect the output using > to a file of your choosing. I would probably name it
 
 I have placed a gtf file of differentially expressed exons called DifferentiallyExpressedExons.gtf in the directory. Use bedtools intersect to count the number of gene model exons that overlap with differentially expressed exons.
 
+## Calculating the read coverage at specific genes
+
+Since this dataset was a gene capture enrichment, we might expect variable coverage at multiple genes in the genome. I would like to know the average read coverage across DPCK. 
+
+    /usr/local/bedtools/latest/bin/bedtools coverage -a Hg19.Chr17.UCSC-3.exons.gtf -b Brca1Reads_aligned.sorted.dedup.realigned.bam | grep "DPCK"
+
+    Default Output:
+	 After each entry in A, reports:
+	   1) The number of features in B that overlapped the A interval.
+	   2) The number of bases in A that had non-zero coverage.
+	   3) The length of the entry in A.
+	   4) The fraction of bases in A that had non-zero coverage.
+
 ## Extracting alignments over specific intervals
 
 You have competing collaborators who want your full dataset to study DPCK and a suite of other genes. You're not interested in sharing the entire dataset before publication, but still want to collaborate. You decide to share with them only the read alignments over the DPCK1 gene. How do you extract a region of aligned reads from a .bam alignment file?
