@@ -24,6 +24,10 @@ And look -- there is the answer to last week's lab homework -- the only SNP loca
 
 If you wanted to identify every gene model that DIDNT overlap with a SNP, then add "-v". 
 
+## Identifying gene models (gtf) that overlap with locations of differentially expressed genes (gtf)
+
+I have placed a gtf file of differentially expressed exons called DifferentiallyExpressedExons.gtf in the directory. Use bedtools intersect to count the number of gene model exons that overlap with differentially expressed exons.
+
 ## Extracting alignments over specific intervals
 
 You have competing collaborators who want your full dataset to study DPCK and a suite of other genes. You're not interested in sharing the entire dataset before publication, but still want to collaborate. You decide to share with them only the read alignments over the DPCK1 gene. How do you extract a region of aligned reads from a .bam alignment file?
@@ -37,4 +41,3 @@ Samtools can do this for you. The DPCK gene is start and stop codons are at 4071
 But SAM files are big, we should really compress this into .bam before saving it. What flag in samtools view can you add to output a .bam file instead of the default .sam file?
 
     samtools view -h
-
