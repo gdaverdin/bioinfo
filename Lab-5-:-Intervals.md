@@ -15,6 +15,7 @@ Goal: Which gene models intersect with a SNP that we called?
 We'll start by using bedtools intersect to identify the intersection of two or more annotations.
 
 ![](http://bedtools.readthedocs.org/en/latest/_images/intersect-glyph.png)
+Source: http://quinlanlab.org/tutorials/cshl2013/bedtools.html
 
     /usr/local/bedtools/latest/bin/bedtools intersect -h
     /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
