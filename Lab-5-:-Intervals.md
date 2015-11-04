@@ -24,6 +24,23 @@ And look -- there is the answer to last week's lab homework -- the only SNP loca
 
 If you wanted to identify every gene model that DIDNT overlap with a SNP, then add "-v". 
 
+## Find the closest SNPs to each exon
+
+    /usr/local/bedtools/latest/bin/bedtools closest -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
+
+Weird. It's throwing an error saying that our .gtf isn't sorted. 
+
+    Error: Sorted input specified, but the file Hg19.Chr17.UCSC-3.exons.gtf has the following out of order record
+    chr17	hg19_spAnnot	exon	131559	131645	1000.000000	.	.	gene_id "zinc finger"; transcript_id "zinc finger";
+
+OK. bedtools can sort .bam files for us. Here's what I did to fix this:
+
+    /usr/local/bedtools/latest/bin/bedtools sort -i Hg19.Chr17.UCSC-3.exons.gtf > Hg19.Chr17.UCSC-3.exons.sort.gtf
+
+Then we can run bedtools closest again. 
+
+    /usr/local/bedtools/latest/bin/bedtools closest -a Hg19.Chr17.UCSC-3.exons.sort.gtf -b Brca_raw_variants.vcf
+
 ## Identifying gene models (gtf) that overlap with locations of differentially expressed genes (gtf)
 
 I have placed a gtf file of differentially expressed exons called DifferentiallyExpressedExons.gtf in the directory. Use bedtools intersect to count the number of gene model exons that overlap with differentially expressed exons.
