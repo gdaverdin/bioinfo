@@ -23,3 +23,18 @@ Source: http://quinlanlab.org/tutorials/cshl2013/bedtools.html
 And look -- there is the answer to last week's lab homework -- the only SNP located in an exon. Based on the above picture, add the flag "-wa" and see what happens. Then "-wb" instead. 
 
 If you wanted to identify every gene model that DIDNT overlap with a SNP, then add "-v". 
+
+## Extracting alignments over specific intervals
+
+You have competing collaborators who want your full dataset to study DPCK and a suite of other genes. You're not interested in sharing the entire dataset before publication, but still want to collaborate. You decide to share with them only the read alignments over the DPCK1 gene. How do you extract a region of aligned reads from a .bam alignment file?
+
+Samtools can do this for you. The DPCK gene is start and stop codons are at 40716757 and 43112247, respectively. Let's isolate reads just for this region and name it DPCK1.sam. By default, samtools will output a SAM file. 
+
+    samtools view Brca1Reads_aligned.sorted.dedup.realigned.bam chr17:40716757-43112247 > DPCK1.sam
+
+    head DPCK1.sam
+
+But SAM files are big, we should really compress this into .bam before saving it. What flag in samtools view can you add to output a .bam file instead of the default .sam file?
+
+    samtools view -h
+
