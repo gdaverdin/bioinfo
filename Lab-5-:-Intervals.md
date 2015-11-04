@@ -41,3 +41,14 @@ Samtools can do this for you. The DPCK gene is start and stop codons are at 4071
 But SAM files are big, we should really compress this into .bam before saving it. What flag in samtools view can you add to output a .bam file instead of the default .sam file?
 
     samtools view -h
+
+Now let's package up this data for our collaborators into a tarball, compressed with the bzip2 algorithm.
+
+    mkdir data_for_collaborators
+    cp DPCK1.bam chr17.fa data_for_collaborators/
+    tar -cjf data_for_collaborators.tar.bz2 data_for_collaborators/
+
+Now we have a nice, small file that we can transfer to our collaborators:
+
+    -rw-rw---- 1 aharkess jlmlab  29M Nov  4 14:26 data_for_collaborators.tar.bz2
+    
