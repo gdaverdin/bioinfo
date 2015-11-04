@@ -18,7 +18,7 @@ We'll start by using bedtools intersect to identify the intersection of two or m
 Source: http://quinlanlab.org/tutorials/cshl2013/bedtools.html
 
     /usr/local/bedtools/latest/bin/bedtools intersect -h
-    /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
+    /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.exons.gtf -b Brca_raw_variants.vcf
 
     /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.gtf -b Brca_raw_variants.vcf
     chr17	hg19_spAnnot	CDS	43107539	43107539	1000.000000	.	2	gene_id "DPCK"; transcript_id "DPCK_dup1";
