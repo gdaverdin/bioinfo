@@ -1,6 +1,6 @@
 Today we will go over a set of practical exercises regarding intervals in genomic data. Intervals are critical for genomics; every gene annotation, transposon annotation, and read alignment is really just an interval of locations along a genome or transcriptome -- a start and stop location. 
 
-Today's lab will focus largely on using the bedtools suite of programs. We will use the data and your outputs from the Variant Calling lab. I have placed these files here so you can copy them into your own directory:
+Today's lab will focus largely on using the bedtools and samtools suites of programs. We will use the data and your outputs from the Variant Calling lab. I have placed these files here so you can copy them into your own directory:
     
     /home/student/binf4550/data/05.Intervals
 
