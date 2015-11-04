@@ -18,8 +18,8 @@ We'll start by using bedtools intersect to identify the intersection of two or m
 Source: http://quinlanlab.org/tutorials/cshl2013/bedtools.html
 
     /usr/local/bedtools/latest/bin/bedtools intersect -h
-
     /usr/local/bedtools/latest/bin/bedtools intersect -a Hg19.Chr17.UCSC-3.exons.gtf -b Brca_raw_variants.vcf
-    chr17	hg19_spAnnot	exon	43107539	43107539	1000.000000	.	.	gene_id "DPCK"; transcript_id "DPCK_dup1";
 
-And look -- there is the answer to last week's lab homework -- the only SNP located in an exon. Based on the above picture, add the flag "-wa" and see what happens. Then "-wb" instead. Then "-v". 
+And look -- there is the answer to last week's lab homework -- the only SNP located in an exon. Based on the above picture, add the flag "-wa" and see what happens. Then "-wb" instead. 
+
+If you wanted to identify every gene model that DIDNT overlap with a SNP, then add "-v". 
