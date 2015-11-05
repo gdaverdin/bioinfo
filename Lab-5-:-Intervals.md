@@ -70,7 +70,7 @@ You have competing collaborators who want your full dataset to study DPCK and a 
 
 Samtools can do this for you. The DPCK gene is start and stop codons are at 40716757 and 43112247, respectively. Let's isolate reads just for this region and name it DPCK1.sam. By default, samtools will output a SAM file. 
 
-    samtools view Brca1Reads_aligned.sorted.dedup.realigned.bam chr17:40716757-43112247 > DPCK1.sam
+    samtools view -h Brca1Reads_aligned.sorted.dedup.realigned.bam chr17:40716757-43112247 > DPCK1.sam
 
     head DPCK1.sam
 
