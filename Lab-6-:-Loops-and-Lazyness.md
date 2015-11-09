@@ -12,6 +12,4 @@ Here is an example of a for loop that
     SOMETHING INTERESTING
     done
     
-
-
 ## The while loop
