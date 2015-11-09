@@ -12,4 +12,7 @@ Here is an example of a for loop that
     SOMETHING INTERESTING
     done
     
+
+Let's start by running FASTQC on a set of FASTQ files. 
+
 ## The while loop
