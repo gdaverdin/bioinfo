@@ -3,3 +3,5 @@ So far in this course, we have been working on one analysis at a time. What if w
 We will talk about two types of loops today, the "for" loop and the "while" loop. We will implement both types in the bash language in unix. 
 
 ## The for loop
+
+## The while loop
