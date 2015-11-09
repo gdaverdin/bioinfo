@@ -6,10 +6,12 @@ The most basic concept of a loop is that we "loop over" multiple things and do s
 
 Here is an example of a for loop that 
 
+    #!/bin/bash
     for i in *.fastq
     do
     SOMETHING INTERESTING
     done
     
+
 
 ## The while loop
