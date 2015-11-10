@@ -4,7 +4,7 @@ The most basic concept of a loop is that we "loop over" multiple things and do s
 
 ## The for loop
 
-Here is an example of a for loop that 
+Here is a basic skeleton example of a for loop in bash.
 
     #!/bin/bash
     for i in *.fastq
