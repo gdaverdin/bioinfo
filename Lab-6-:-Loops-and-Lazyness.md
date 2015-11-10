@@ -53,3 +53,17 @@ Spend a few minutes to write your own loop to count the number of reads in each 
     50121
     The read count of file Brain.fq is:
     37992
+
+## Using command substitution
+
+We can also insert the output from commands into a bash script using the backticks
+
+    `command`
+
+Here's an example:
+
+    #!/bin/bash
+    for i in *.fq
+    do
+    echo "The read count of file $i is:`grep -c "^@ERR" $i`"
+    done
