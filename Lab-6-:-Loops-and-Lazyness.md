@@ -67,3 +67,13 @@ Here's an example:
     do
     echo "The read count of file $i is:`grep -c "^@ERR" $i`"
     done
+
+## Practical exercise: Count the number of sequences in a directory filled with fasta files
+
+Now you're going to write your own loop again. This time, you're going to write a loop to go over every fasta file in a directory, then print out a two column file with 
+
+Fasta_name     Number_of_sequences
+
+Start out by copying a directory of multiple sequence alignments for the pineapple genome from /home/student/binf4550/data/06.Loops/pineapple_alignments/
+
+
