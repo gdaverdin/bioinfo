@@ -44,4 +44,6 @@ Or we can submit it to the queue using
 
 **Weird. This code isn't producing any output. Find and fix the error.**
 
-## The while loop
+## Write your own loop
+
+Write your own loop to count the number of reads in each file.
