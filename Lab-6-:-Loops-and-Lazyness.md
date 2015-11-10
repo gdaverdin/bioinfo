@@ -22,15 +22,23 @@ Let's start by running FASTQC on the brain and adrenal RNAseq fastq files. These
     -rw-rw---- 1 aharkess jlmlab  58M Oct 19 13:56 chr19.fa
     -rw-rw---- 1 aharkess jlmlab 5.9M Oct 19 13:57 USCS_hg19_chr19.genes.gtf
 
-To run FASTQC on both of our fastq files in one fell swoop, we can write a loop. Let me show you an example first, then we can break it down afterwards.
+To run FASTQC on both of our fastq files in one fell swoop, we can write a loop. Let me show you an example first, then we can break it down afterwards. I called mine "batch_fastqc.sh".
 
     #!/bin/bash
-    for i in *.fq
+    for i in *.fastq
     do
     echo "Beep boop. I'm a computer running fastqc on file $i"
     /usr/local/fastqc/latest/fastqc $i
     done
 
-What this loop does in "pseudocode": For every file "i" that ends in *.fq in my current directory, print the phrase "Beep boop. I'm a computer running fastqc on file $i" (see how I referenced the current fastq file by using $i ?). Then run fastqc using $i as the input. Then move on to the next file that ends with *.fq in my directory, and do it all over again.
+What this loop does in "pseudocode": For every file "i" that ends in *.fastq in my current directory, print the phrase "Beep boop. I'm a computer running fastqc on file $i" (see how I referenced the current fastq file by using $i ?). Then run fastqc using $i as the input. Then move on to the next file that ends with *.fastq in my directory, and do it all over again.
+
+To run this code on the interactive node, we can type:
+
+    sh ./batch_fastqc.sh
+
+Or we can submit it to the queue using 
+
+    qsub -q rcc-30d ./batch_fastqc.sh
 
 ## The while loop
