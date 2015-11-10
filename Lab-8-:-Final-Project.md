@@ -11,7 +11,7 @@ If you would like, you can work with a partner on the analysis and interpretatio
 
 # Potential Projects:
 
-* Project 1: Use SPAdes to assemble Illumina reads and annotate an _E. coli_ genome that produces Shiga toxin. This sample was isolated from faeces of diarrheic cattle. Annotate your genome with the NCBI Glimmer portal, and use Bedtools to extract a multifasta file of every gene location. Use BLAST to compare your gene annotations to that of another E. coli strain and plot a distribution of the % similarity for each best hit. http://www.ncbi.nlm.nih.gov/sra/SRX1368955[accn]
+* Project 1: Use SPAdes to assemble Illumina reads and annotate an _E. coli_ genome that produces Shiga toxin. This sample was isolated from faeces of diarrhetic cattle. Annotate your genome with the NCBI Glimmer portal, and use Bedtools to extract a multifasta file of every gene location. Use BLAST to compare your gene annotations to that of another E. coli strain and plot a distribution of the % similarity for each best hit. http://www.ncbi.nlm.nih.gov/sra/SRX1368955[accn]
 
 * Project 2: 
 
