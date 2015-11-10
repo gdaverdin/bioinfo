@@ -41,4 +41,6 @@ Or we can submit it to the queue using
 
     qsub -q rcc-30d ./batch_fastqc.sh
 
+Weird. This code isn't producing any output. Find and fix the error. 
+
 ## The while loop
