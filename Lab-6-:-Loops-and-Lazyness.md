@@ -13,7 +13,7 @@ Here is a basic skeleton example of a for loop in bash.
     done
     
 
-Let's start by running FASTQC on the brain and adrenal RNAseq fastq files. These are single end reads (not paired end). Copy the fastqs, chr19.fa, and the gtf gene models into your own directory. I have placed the data here:
+Let's start by running FASTQC on the brain and adrenal RNAseq fastq files. These are single end reads (not paired end). LOG ONTO AN INTERACTIVE NODE USING QLOGIN. Copy the fastqs, chr19.fa, and the gtf gene models into your own directory. I have placed the data here:
 
     aharkess@zcluster:/home/student/binf4550/data/06.Loops/human_rnaseq$ ls -lh
     total 88M
@@ -22,7 +22,7 @@ Let's start by running FASTQC on the brain and adrenal RNAseq fastq files. These
     -rw-rw---- 1 aharkess jlmlab  58M Oct 19 13:56 chr19.fa
     -rw-rw---- 1 aharkess jlmlab 5.9M Oct 19 13:57 USCS_hg19_chr19.genes.gtf
 
-To run FASTQC on both of our fastq files in one fell swoop, we can write a loop.
+To run FASTQC on both of our fastq files in one fell swoop, we can write a loop. Let me show you an example first, then we can break it down afterwards.
 
     #!/bin/bash
     for i in *.fq
@@ -30,5 +30,7 @@ To run FASTQC on both of our fastq files in one fell swoop, we can write a loop.
     echo "Beep boop. I'm a computer running fastqc on file $i"
     /usr/local/fastqc/latest/fastqc $i
     done
+
+What this loop does in "pseudocode": For every file "i" that ends in *.fq in my current directory, print the phrase "Beep boop. I'm a computer running fastqc on file $i" (see how I referenced the current fastq file by using $i ?). Then run fastqc using $i as the input. Then move on to the next file that ends with *.fq in my directory, and do it all over again.
 
 ## The while loop
