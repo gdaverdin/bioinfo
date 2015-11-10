@@ -76,4 +76,6 @@ Fasta_name     Number_of_sequences
 
 Start out by copying a directory of multiple sequence alignments for the pineapple genome from /home/student/binf4550/data/06.Loops/pineapple_alignments/
 
+You'll need to use command substitution to make this work. See how far you can get before you ask for help.
+
 
