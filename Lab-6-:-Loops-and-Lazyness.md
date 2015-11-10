@@ -22,4 +22,13 @@ Let's start by running FASTQC on the brain and adrenal RNAseq fastq files. These
     -rw-rw---- 1 aharkess jlmlab  58M Oct 19 13:56 chr19.fa
     -rw-rw---- 1 aharkess jlmlab 5.9M Oct 19 13:57 USCS_hg19_chr19.genes.gtf
 
+To run FASTQC on both of our fastq files in one fell swoop, we can write a loop.
+
+    #!/bin/bash
+    for i in *.fq
+    do
+    echo "Beep boop. I'm a computer running fastqc on file $i"
+    /usr/local/fastqc/latest/fastqc $i
+    done
+
 ## The while loop
