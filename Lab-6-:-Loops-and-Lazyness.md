@@ -46,4 +46,4 @@ Or we can submit it to the queue using
 
 ## Write your own loop
 
-Write your own loop to count the number of reads in each file.
+Write your own loop to count the number of reads in each fastq file.
