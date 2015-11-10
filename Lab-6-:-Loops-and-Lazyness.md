@@ -46,4 +46,10 @@ Or we can submit it to the queue using
 
 ## Write your own loop
 
-Spend a few minutes to write your own loop to count the number of reads in each fastq file.
+Spend a few minutes to write your own loop to count the number of reads in each fastq file. I would like the output to look like this:
+
+    aharkess@compute-14-7:/home/student/binf4550/data/06.Loops/human_rnaseq$ sh ../count_reads.sh
+    The read count of file Adrenal.fq is:
+    50121
+    The read count of file Brain.fq is:
+    37992
