@@ -72,9 +72,11 @@ Here's an example:
 
 Now you're going to write your own loop again. This time, you're going to write a loop to go over every fasta file in a directory, then print out a two column file with 
 
-Fasta_name     Number_of_sequences
+    Fasta_name     Number_of_sequences
 
-Start out by copying a directory of multiple sequence alignments for the pineapple genome from /home/student/binf4550/data/06.Loops/pineapple_alignments/
+Start out by copying a directory of multiple sequence alignments for the pineapple genome from      
+
+    /home/student/binf4550/data/06.Loops/pineapple_alignments/
 
 You'll need to use command substitution to make this work. See how far you can get before you ask for help.
 
