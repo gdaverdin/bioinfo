@@ -7,7 +7,7 @@ source: www.zebrafishlab.be
 
 ## Get the data and decompress it
 
-I have placed a compressed file with the data on my lab server. *Log onto an interactive node using qlogin* and download this data to your account on the cluster using wget. 
+I have placed a compressed file with the data on my lab server. **Log onto an interactive node using qlogin** and download this data to your account on the cluster using wget. 
 
     http://jlmwiki.plantbio.uga.edu/~aharkess/zebrafish_data_from_collaborators.tar.bz2
 
