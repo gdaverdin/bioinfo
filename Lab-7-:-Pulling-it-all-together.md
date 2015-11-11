@@ -38,3 +38,8 @@ Here are steps you need to take to align reads and call differential expression 
 3. Run cuffdiff to identify differentially expressed genes between the two conditions
 
     /usr/local/cufflinks/latest/bin/cuffdiff -h
+
+
+## Advanced challenge
+
+If you finish, or would like a practical challenge. Find or write a program or script that can extract a fasta file of the gene sequences for each differentially expressed gene. Your collaborator wants to design qPCR primers to validate some of your differential expression findings. 
