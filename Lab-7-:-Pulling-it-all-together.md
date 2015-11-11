@@ -17,7 +17,7 @@ This file ends in tar.bz2, meaning that it is a tarball (.tar) compressed with b
 
 First, write a loop to check the quality of the reads using FASTQC. I have given you the data compressed with gzip, which is why they end with .gz. FASTQC can run with gzip-compressed fastq files, so modify your loop accordingly. 
 
-**What you should be asking yourself: **
+**What you should be asking yourself:**
 
 * Is this data clean? 
 * Is there adapter read-through? 
