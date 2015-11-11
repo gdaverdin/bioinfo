@@ -1,6 +1,6 @@
 In the past 6 labs, you've used a suite of programs and gotten faster at command line tools. Let's combine lessons from a few labs and let you perform your own analysis. For this lab, I will **not** be giving you the full commands to type. Instead, I will provide you a roadmap of programs that you need to execute yourself. You will need to utilize the manual, the help pages and the internet to complete the analysis. 
 
-Your collaborators have asked you to identify differentially expressed genes in Zebrafish (_Danio rerio_). They have generated RNAseq for two stages of development, 2 cell embryo and 6 hours post-fertilization. The data are 2x76nt paired-end RNAseq reads derived from polyA-selected mRNA. 
+Your collaborators have asked you to identify differentially expressed genes in Zebrafish (_Danio rerio_). They have generated RNAseq for two stages of development, 2 cell embryo and 6 hours post-fertilization. The data are 2x76nt paired-end RNAseq reads derived from polyA-selected mRNA. These data are NOT strand-specific (fr-unstranded).
 
 ![](http://www.zebrafishlab.be/sites/default/files/styles/media_gallery_large/public/embryos-7.jpg)
 source: www.zebrafishlab.be
@@ -25,7 +25,7 @@ First, write a for loop to check the quality of the reads using FASTQC. I have g
 
 ## Align the reads to the _Danio rerio_ genome using tophat2
 
-Here are steps you need to take to align reads and call differential expression:
+Here are steps you need to take to align reads and call differential expression using the Tuxedo suite of programs (specifically, tophat2 and cuffdiff):
 
 1. Index the genome fasta file using bowtie2-build
 
@@ -37,3 +37,4 @@ Here are steps you need to take to align reads and call differential expression:
 
 3. Run cuffdiff
 
+    /usr/local/cufflinks/latest/bin/cuffdiff -h
