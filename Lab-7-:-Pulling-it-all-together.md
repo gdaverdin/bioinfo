@@ -25,10 +25,15 @@ First, write a for loop to check the quality of the reads using FASTQC. I have g
 
 ## Align the reads to the _Danio rerio_ genome using tophat2
 
-I'm not going to give you the commands for this lab. You'll need to use the manual, the GACRC help page, and our previous transcriptome lab to figure it out. Here are steps you need to take to align reads and call differential expression:
+Here are steps you need to take to align reads and call differential expression:
 
 1. Index the genome fasta file using bowtie2-build
-2. Run tophat2, and be sure to include the --GTF flag to specify known transcript locations in your gtf annotation file.
-3. Run cuffdiff
 
+    /usr/local/bowtie2/latest/bin/bowtie2-build -h
+
+2. Run tophat2, and be sure to include the --GTF flag to specify known transcript locations in your gtf annotation file.
+
+    /usr/local/tophat/latest/bin/tophat2 -h
+
+3. Run cuffdiff
 
