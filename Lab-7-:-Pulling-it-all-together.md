@@ -3,6 +3,13 @@ In the past 6 labs, you've used a suite of programs and gotten faster at command
 Your collaborators have asked you to identify differentially expressed genes in Zebrafish (_Danio rerio_). They have generated RNAseq for two stages of development, 2 cell embryo and 6 hours post-fertilization. The data are 2x76nt paired-end RNAseq reads derived from polyA-selected mRNA. 
 
 ![](http://www.zebrafishlab.be/sites/default/files/styles/media_gallery_large/public/embryos-7.jpg)
+source: www.zebrafishlab.be
+
+## Get the data
+
+I have placed a compressed file with the data on my lab server. Download this data to your account on the cluster using wget. 
+
+    
 
 ## Write a loop to run FASTQC on each file
 
