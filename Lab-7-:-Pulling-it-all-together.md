@@ -11,7 +11,7 @@ I have placed a compressed file with the data on my lab server. Download this da
 
     http://jlmwiki.plantbio.uga.edu/~aharkess/zebrafish_data_from_collaborators.tar.bz2
 
-This file ends in tar.bz2, meaning that it is a tarball (.tar) compressed with bzip2 (.bz2). Decompress and unpack this file using 
+This file ends in tar.bz2, meaning that it is a tarball (.tar) compressed with bzip2 (.bz2). You have decompressed and unpacked a .tar.bz2 file before -- look in the transcriptome lab to refresh yourself. 
 
 ## Write a loop to run FASTQC on each file
 
