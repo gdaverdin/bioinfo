@@ -35,6 +35,6 @@ Here are steps you need to take to align reads and call differential expression 
 
     /usr/local/tophat/latest/bin/tophat2 -h
 
-3. Run cuffdiff
+3. Run cuffdiff to identify differentially expressed genes between the two conditions
 
     /usr/local/cufflinks/latest/bin/cuffdiff -h
