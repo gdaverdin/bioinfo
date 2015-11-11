@@ -5,7 +5,7 @@ Your collaborators have asked you to identify differentially expressed genes in 
 ![](http://www.zebrafishlab.be/sites/default/files/styles/media_gallery_large/public/embryos-7.jpg)
 source: www.zebrafishlab.be
 
-## Get the data
+## Get the data and decompress it
 
 I have placed a compressed file with the data on my lab server. Download this data to your account on the cluster using wget. 
 
