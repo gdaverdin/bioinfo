@@ -1,0 +1,1 @@
+In the past 6 labs, you've used a suite of programs and gotten faster at command line tools
