@@ -1,4 +1,4 @@
-In the past 6 labs, you've used a suite of programs and gotten faster at command line tools. Let's combine lessons from a few labs and see how it goes. 
+In the past 6 labs, you've used a suite of programs and gotten faster at command line tools. Let's combine lessons from a few labs and let you perform your own analysis. 
 
 Your collaborators have asked you to identify differentially expressed genes in Zebrafish (_Danio rerio_). They have generated RNAseq for two stages of development, 2 cell embryo and 6 hours post-fertilization. The data are 2x76nt paired-end RNAseq reads derived from polyA-selected mRNA. 
 
