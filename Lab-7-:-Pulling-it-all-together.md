@@ -2,6 +2,8 @@ In the past 6 labs, you've used a suite of programs and gotten faster at command
 
 Your collaborators have asked you to identify differentially expressed genes in Zebrafish (_Danio rerio_). They have generated RNAseq for two stages of development, 2 cell embryo and 6 hours post-fertilization. The data are 2x76nt paired-end RNAseq reads derived from polyA-selected mRNA. 
 
+![](http://www.zebrafishlab.be/sites/default/files/styles/media_gallery_large/public/embryos-7.jpg)
+
 ## Write a loop to run FASTQC on each file
 
 First, write a loop to check the quality of the reads using FASTQC. I have given you the data compressed with gzip, which is why they end with .gz. FASTQC can run with gzip-compressed fastq files, so modify your loop accordingly. 
