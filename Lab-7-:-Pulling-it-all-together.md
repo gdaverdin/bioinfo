@@ -1,4 +1,4 @@
-In the past 6 labs, you've used a suite of programs and gotten faster at command line tools. Let's combine lessons from a few labs and let you perform your own analysis. 
+In the past 6 labs, you've used a suite of programs and gotten faster at command line tools. Let's combine lessons from a few labs and let you perform your own analysis. For this lab, I will **not** be giving you the full commands to type. Instead, I will provide you a roadmap of programs that you need to execute yourself. You will need to utilize the manual, the help pages and the internet to complete the analysis. 
 
 Your collaborators have asked you to identify differentially expressed genes in Zebrafish (_Danio rerio_). They have generated RNAseq for two stages of development, 2 cell embryo and 6 hours post-fertilization. The data are 2x76nt paired-end RNAseq reads derived from polyA-selected mRNA. 
 
@@ -25,6 +25,10 @@ First, write a for loop to check the quality of the reads using FASTQC. I have g
 
 ## Align the reads to the _Danio rerio_ genome using tophat2
 
+I'm not going to give you the commands for this lab. You'll need to use the manual, the GACRC help page, and our previous transcriptome lab to figure it out. Here are steps you need to take to align reads and call differential expression:
 
+1. Index the genome fasta file using bowtie2-build
+2. Run tophat2, and be sure to include the --GTF flag to specify known transcript locations in your gtf annotation file.
+3. Run cuffdiff
 
 
