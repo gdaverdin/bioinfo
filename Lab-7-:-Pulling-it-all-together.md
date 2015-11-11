@@ -9,13 +9,14 @@ source: www.zebrafishlab.be
 
 I have placed a compressed file with the data on my lab server. Download this data to your account on the cluster using wget. 
 
-    
+    http://jlmwiki.plantbio.uga.edu/~aharkess/zebrafish_data_from_collaborators.tar.bz2
+
+This file ends in tar.bz2, meaning that it is a tarball (.tar) compressed with bzip2 (.bz2). Decompress and unpack this file using 
 
 ## Write a loop to run FASTQC on each file
 
 First, write a loop to check the quality of the reads using FASTQC. I have given you the data compressed with gzip, which is why they end with .gz. FASTQC can run with gzip-compressed fastq files, so modify your loop accordingly. 
 
 **What you should be asking yourself: Is this data clean? Is there adapter read-through, is there poor sequencing quality?**
-
 
 
