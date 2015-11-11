@@ -19,4 +19,8 @@ First, write a loop to check the quality of the reads using FASTQC. I have given
 
 **What you should be asking yourself: Is this data clean? Is there adapter read-through, is there poor sequencing quality?**
 
+## Align the reads to the _Danio rerio_ genome using tophat2
+
+
+
 
