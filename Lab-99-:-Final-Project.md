@@ -11,8 +11,10 @@ If you would like, you can work with a partner on the analysis and interpretatio
 
 # Potential Projects:
 
-* Project 1: Use SPAdes to assemble Illumina reads and annotate an _E. coli_ genome that produces Shiga toxin. This sample was isolated from faeces of diarrhetic cattle. Annotate your genome with the NCBI Glimmer portal, and use Bedtools to extract a multifasta file of every gene location. Use BLAST to compare your gene annotations to that of another E. coli strain and plot a distribution of the % similarity for each best hit. http://www.ncbi.nlm.nih.gov/sra/SRX1368955[accn]
+* Project 1: Use SPAdes and Velvet to assemble Illumina reads for an _E. coli_ genome that produces Shiga toxin. This sample was isolated from faeces of diarrhetic cattle and sequenced using Miseq PE300 reads. Annotate your genome with the NCBI Glimmer portal, and use Bedtools to extract a multifasta file of every gene location. Use BLAST to compare your gene annotations to that of another E. coli strain of your choice and plot a distribution of the % similarity for each best hit. http://www.ncbi.nlm.nih.gov/sra/SRX1368955[accn]
 
-* Project 2: 
+* Project 2: Assemble the Salmonella enterica subsp. enterica serovar Typhimurium genome, a highly pathogenic serovar that was used as a biological weapon in the [1984 Rajneeshee bioterror attack](https://en.wikipedia.org/wiki/1984_Rajneeshee_bioterror_attack). These are Miseq PE250 reads. Annotate your genome with the NCBI Glimmer portal, then 
+http://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=2018078 
+
 
 If you have your own data, you are encouraged to use that. We are here to help!
