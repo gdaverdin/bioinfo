@@ -18,6 +18,8 @@ http://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=2018078
 
 * Project 3: Use [QIIME](https://wiki.gacrc.uga.edu/wiki/Qiime) to characterize a heterotrophic bacterial community assembly in an activated sludge wastewater treatment plant.  http://www.ncbi.nlm.nih.gov/sra/SRX669500[accn]
 
-* Project 4: _De novo_ assemble an orchid transcriptome (SRA id = SRR609403) using Trinity. 
+* Project 4: _De novo_ assemble the bee orchid transcriptome, _Ophrys apifera_ (SRA id = SRR609403) using Trinity. Annotate your assembled transcripts against Uniprot by following the Trinity manual. Then present a distribution of Gene Ontology (GO) terms of your annotations.
+
+
 
 If you have your own data, you are encouraged to use that. We are here to help!
