@@ -18,4 +18,6 @@ http://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=2018078
 
 * Project 3: Use [QIIME](https://wiki.gacrc.uga.edu/wiki/Qiime) to characterize a heterotrophic bacterial community assembly in an activated sludge wastewater treatment plant.  http://www.ncbi.nlm.nih.gov/sra/SRX669500[accn]
 
+* Project 4: _De novo_ assemble an orchid transcriptome (SRA id = SRR609403) using Trinity. 
+
 If you have your own data, you are encouraged to use that. We are here to help!
