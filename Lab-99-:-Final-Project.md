@@ -5,7 +5,7 @@ For your final project for this class, you have quite a bit of freedom, but the 
 * any pitfalls you encountered
 * a summary of your results and conclusions
 
-You must also turn in a minimum 6 page paper detailing these points, in addition to a section regarding "potential future directions" on how you would improve your experiment. Undergraduates are exempt from the written paper.
+You must also turn in a minimum 6 page paper detailing these points. The paper should be formatted like a journal article: Introduction, Methods, Results, Discussion. *Undergraduates are exempt from the written paper.*
 
 If you would like, you can work with a partner on the analysis and interpretation of your data, and present jointly for the final project. If you work in a group, you must clearly articulate a specific analysis that you were in charge of. You must **independently** write your own 6 page papers. Please ask me if you have any questions regarding potential plagiarism. 
 
