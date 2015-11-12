@@ -20,6 +20,8 @@ http://www.ncbi.nlm.nih.gov/bioproject?LinkName=sra_bioproject&from_uid=2018078
 
 * Project 4: _De novo_ assemble the bee orchid transcriptome, _Ophrys apifera_ (SRA id = SRR609403) using Trinity. Compare your assembled transcripts against Uniprot genes to identify how many are putative full length assemblies by following the [Trinity manual](https://github.com/trinityrnaseq/trinityrnaseq/wiki/Counting-Full-Length-Trinity-Transcripts). 
 
+* Project 5: Use R and the [rWBclimate package](https://ropensci.org/tutorials/rwbclimate_tutorial.html) to scrape model data from the World Bank Climate Data to visualize the temperature changes in Africa that are predicted under various climate models for the next 40 years. 
+
 
 
 If you have your own data, you are encouraged to use that. We are here to help!
