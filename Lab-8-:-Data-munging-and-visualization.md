@@ -7,3 +7,4 @@ Base or "vanilla" R is plenty powerful and useful, but the benefit of having an 
 My favorite package for plotting data is ggplot2. It is written by Hadley Wickham, a notable R guru. He also develops and maintains a few other packages, most known by RStudio (an R GUI). 
 
     install.packages("ggplot2")
+
