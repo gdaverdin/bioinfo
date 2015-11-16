@@ -9,6 +9,7 @@ Base or "vanilla" R is plenty powerful and useful, but the benefit of having an 
 My favorite package for plotting data is ggplot2. It is written by Hadley Wickham, a notable R guru. He also develops and maintains a few other packages, most known by RStudio (an R GUI). 
 
     install.packages("ggplot2")
+    install.packages("reshape")
 
 # Download data
 
@@ -16,7 +17,7 @@ I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up 
 
     http://jlmwiki.plantbio.uga.edu/~aharkess/Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM
 
-# Read the data into R, 
+# Read the data into R
 
     dat <- read.table('Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM', header=TRUE)
     dat.m <- melt(dat)
