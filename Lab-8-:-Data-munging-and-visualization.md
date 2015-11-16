@@ -6,10 +6,11 @@ You will not be using the cluster today. Instead, open R on your computers.
 
 Base or "vanilla" R is plenty powerful and useful, but the benefit of having an open source platform is that anyone can write packages that have specific, improved functions in them. R has a few built-in ways of downloading and installing packages, which makes this extra useful.
 
-My favorite package for plotting data is ggplot2. It is written by Hadley Wickham, a notable R guru. He also develops and maintains a few other packages, most known by RStudio (an R GUI). We'll use two packages today, ggplot2 and reshape. ggplot2 is the ultimate package for developing publication quality figures. reshape is a very nifty package for "reshaping" data into different structures.
+My favorite package for plotting data is ggplot2. It is written by Hadley Wickham, a notable R guru. He also develops and maintains a few other packages, most known by RStudio (an R GUI). We'll use two packages today, ggplot2 and reshape. ggplot2 is the ultimate package for developing publication quality figures. reshape is a very nifty package for "reshaping" data into different structures. gplot is an additional package which I use for producing heatmaps of data frames. 
 
     install.packages("ggplot2")
     install.packages("reshape")
+    install.packages("gplot")
 
 # Download data
 
