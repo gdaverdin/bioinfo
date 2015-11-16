@@ -12,8 +12,9 @@ My favorite package for plotting data is ggplot2. It is written by Hadley Wickha
 
 # Download data
 
-I have left a copy of the TMM-normalized FPKMs for a set of genes here. 
+I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up your terminal, change directories to the desktop, and make a directory called "heatmaps". cd into this directory, then use wget to download the data to that directory.
 
     http://jlmwiki.plantbio.uga.edu/~aharkess/Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM
 
 # 
+
