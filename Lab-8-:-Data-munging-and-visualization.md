@@ -4,6 +4,10 @@ You will not be using the cluster today. Instead, open R on your computers.
 
 One caveat you should keep in your mind -- R uses 1-based numbering, meaning that it starts counting at 1 instead of 0. Makes a lot of sense when you're doing math...!
 
+# Open R
+
+All of the lab computers have R installed on them. Open it up, and you'll find an R terminal window opens. If you press command+N, you will open up a blank script that you can enter commands in (and later save them to a file). You can either enter commands directly into the terminal window, or use command+enter to run one or more lines of your script.  
+
 # Install packages in R
 
 Base or "vanilla" R is plenty powerful and useful, but the benefit of having an open source platform is that anyone can write packages that have specific, improved functions in them. R has a few built-in ways of downloading and installing packages, which makes this extra useful.
@@ -22,7 +26,7 @@ I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up 
 
 # Read the data into R
 
-    setwd('
+    
 
     dat <- read.table('Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM', header=TRUE)
     dat.m <- melt(dat)
