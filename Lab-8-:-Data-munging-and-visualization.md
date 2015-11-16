@@ -1,4 +1,6 @@
-Today we will use R to visualize RNAseq-based gene expression using heatmaps. R is a statistical computing language that is open source and free (unlike SAS). https://www.r-project.org. Today you will be generating a heatmap of TMM-normalized FPKM values from an RNAseq differential expression paper I published [(Harkess et al. 2015)](https://www.dropbox.com/s/0s1j2hhhx88n7qs/Harkess_et_al-2015-New_Phytologist-2.pdf?dl=0). 
+Today we will use R to visualize RNAseq-based gene expression using heatmaps. R is a statistical computing language that is open source and free (unlike SAS). Today you will be generating a heatmap of TMM-normalized FPKM values from an RNAseq differential expression paper I published [(Harkess et al. 2015)](https://www.dropbox.com/s/0s1j2hhhx88n7qs/Harkess_et_al-2015-New_Phytologist-2.pdf?dl=0). 
+
+You will not be using the cluster today. Instead, open R on your computers. 
 
 # Install packages in R
 
@@ -10,4 +12,8 @@ My favorite package for plotting data is ggplot2. It is written by Hadley Wickha
 
 # Download data
 
-http://jlmwiki.plantbio.uga.edu/~aharkess/Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM
+I have left a copy of the TMM-normalized FPKMs for a set of genes here. 
+
+    http://jlmwiki.plantbio.uga.edu/~aharkess/Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM
+
+# 
