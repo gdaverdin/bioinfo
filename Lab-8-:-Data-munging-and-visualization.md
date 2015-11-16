@@ -16,5 +16,9 @@ I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up 
 
     http://jlmwiki.plantbio.uga.edu/~aharkess/Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM
 
-# 
+# Read the data into R, 
 
+    dat <- read.table('Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM', header=TRUE)
+    dat.m <- melt(dat)
+
+    p <- ggplot(dat.m, aes(x=variable, y=value)) + geom_boxplot() + coord_flip()
