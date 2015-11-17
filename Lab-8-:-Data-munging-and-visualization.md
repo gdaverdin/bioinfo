@@ -38,6 +38,10 @@ Now let's look at our data. Just like in unix, let's use head to look at the fir
 
     head(dat)
 
+Let's figure out how many genes are in this set by calculating the dimensions of our data frame.
+
+    dim(dat)
+    [1] 570   9
 # Manipulate and reshape the data
 
 The melt() function in the reshape package is infinitely useful. It can take a data frame and guess the best way to reformat it into a more simple structure. Let's use the melt function, and save the output to a new variable called dat.m
