@@ -16,7 +16,13 @@ My favorite package for plotting data is ggplot2. It is written by Hadley Wickha
 
     install.packages("ggplot2")
     install.packages("reshape")
-    install.packages("gplot")
+    install.packages("gplots")
+
+and load them by using the library() command
+
+    library(ggplot2)
+    library(reshape)
+    library(gplots)
 
 # Download data
 
@@ -61,6 +67,10 @@ Kinda hard to see anything with such a large Y axis. Let's limit this to genes w
 ![](http://i.imgur.com/dfTkN2V.png)
 
 Now let's make a heatmap. It helps to define your own color palette instead of using defaults, though. 
+
+heatmap.2 requires that we convert our data frame into a matrix. This luckily is easy.
+
+    dat <- as.matrix(dat)
 
     my_palette <- colorRampPalette(c("green","black","red"))(n = 1000)
     heatmap.2(dat, dendrogram="both", trace="none", scale="row", density.info="none", col=my_palette)
