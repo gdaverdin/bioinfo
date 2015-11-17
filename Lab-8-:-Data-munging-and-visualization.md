@@ -56,6 +56,6 @@ Kinda hard to see anything with such a large Y axis. Let's limit this to genes w
 
 Now let's make a heatmap
 
-
+    heatmap.2(dat, dendrogram="both", trace="none", scale="row", density.info="none", col=my_palette)
 
 ![](http://i.imgur.com/ovAz600.png)
