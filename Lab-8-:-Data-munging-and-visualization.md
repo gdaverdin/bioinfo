@@ -22,7 +22,7 @@ My favorite package for plotting data is ggplot2. It is written by Hadley Wickha
 
 I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up your terminal, change directories to the desktop, and make a directory called "heatmaps". cd into this directory, then use wget to download the data to that directory.
 
-    http://jlmwiki.plantbio.uga.edu/~aharkess/Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM
+    http://jlmwiki.plantbio.uga.edu/~aharkess/TMM_normalized_FPKM_matrix.txt
 
 # Read the data into R
 
@@ -32,7 +32,7 @@ Well. R is a new language for many of you, and you won't learn its intricacies i
 
 Alright, let's start by reading our data in. R can parse data tables using the read.table() function. Since our data table has a header line with the library names, I tell R to name each column by that header using the "header=TRUE" boolean. We also assign the output of the read.table command to save to a variable called "dat". See how I used the <- arrow to create a new variable?
 
-    dat <- read.table('Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM', header=TRUE)
+    dat <- read.table('TMM_normalized_FPKM_matrix.txt', header=TRUE)
     
 Now let's look at our data. Just like in unix, let's use head to look at the first few lines.
 
