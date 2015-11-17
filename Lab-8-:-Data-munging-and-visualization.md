@@ -38,10 +38,12 @@ Now let's look at our data. Just like in unix, let's use head to look at the fir
 
     head(dat)
 
+# Manipulate and reshape the data
 
-
-
+The melt() function in the reshape package is infinitely useful. It can take a data frame and guess the best way to reformat it into a more simple structure. Let's use the melt function, and save the output to a new variable called dat.m
 
 dat.m <- melt(dat)
+head(dat.m)
 
+# 
     p <- ggplot(dat.m, aes(x=variable, y=value)) + geom_boxplot() + coord_flip()
