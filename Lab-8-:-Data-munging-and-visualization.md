@@ -33,6 +33,15 @@ Well. R is a new language for many of you, and you won't learn its intricacies i
 Alright, let's start by reading our data in. R can parse data tables using the read.table() function. Since our data table has a header line with the library names, I tell R to name each column by that header using the "header=TRUE" boolean. We also assign the output of the read.table command to save to a variable called "dat". See how I used the <- arrow to create a new variable?
 
     dat <- read.table('Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM', header=TRUE)
-    dat.m <- melt(dat)
+    
+Now let's look at our data. Just like in unix, let's use head to look at the first few lines.
+
+    head(dat)
+
+
+
+
+
+dat.m <- melt(dat)
 
     p <- ggplot(dat.m, aes(x=variable, y=value)) + geom_boxplot() + coord_flip()
