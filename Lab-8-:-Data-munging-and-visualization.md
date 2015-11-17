@@ -38,7 +38,7 @@ Now let's look at our data. Just like in unix, let's use head to look at the fir
 
     head(dat)
 
-Let's figure out how many genes are in this set by calculating the dimensions of our data frame.
+Let's figure out how many genes are in this set by calculating the dimensions of our data frame. The output is "rows   columns"
 
     dim(dat)
     [1] 570   9
