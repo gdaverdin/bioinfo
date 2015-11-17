@@ -45,5 +45,11 @@ The melt() function in the reshape package is infinitely useful. It can take a d
     dat.m <- melt(dat)
     head(dat.m)
 
-# 
+# Plot the reshaped data using ggplot2 to generate a boxplot for each sample
+
     p <- ggplot(dat.m, aes(x=variable, y=value)) + geom_boxplot() + coord_flip()
+    p
+
+Kinda hard to see anything with such a large Y axis. Let's limit this to genes with FPKMs < 100
+   
+    p + ylim(0,100)
