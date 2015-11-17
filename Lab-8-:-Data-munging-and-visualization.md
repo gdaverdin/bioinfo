@@ -26,11 +26,11 @@ I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up 
 
 # Read the data into R
 
-Well. R is a new language for many of you, and you won't learn its intricacies in one day. But, like many informatic things, it's best to have a project in mind and jump right in. I'll comment the code so you can see what its doing. Remember that comments (lines starting with #) don't get executed. To bring up the help/manual page for a function, type
+Well. R is a new language for many of you, and you won't learn its intricacies in one day. But, like many informatic things, it's best to have a project in mind and jump right in. I'll comment the code so you can see what its doing. Remember that comments (lines starting with #) don't get executed. To bring up the help/manual page for a function, use a question mark in front of the command, like this:
 
     ?read.table
 
-
+Alright, let's start by reading our data in. R can parse data tables using the read.table() function. Since our data table has a header line with the library names, I tell R to name each column by that header using the "header=TRUE" boolean.
 
     dat <- read.table('Lim_Italian.counts.matrix.TMM_normalized.DEgenes.FPKM', header=TRUE)
     dat.m <- melt(dat)
