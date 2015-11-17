@@ -26,7 +26,9 @@ I have left a copy of the TMM-normalized FPKMs for a set of genes here. Open up 
 
 # Read the data into R
 
-Well. R is a new language for many of you, and you won't learn its intricacies in one day. I'll comment the code so you can see what its doing. Remember that comments (lines starting with #) don't get executed. 
+Well. R is a new language for many of you, and you won't learn its intricacies in one day. But, like many informatic things, it's best to have a project in mind and jump right in. I'll comment the code so you can see what its doing. Remember that comments (lines starting with #) don't get executed. To bring up the help/manual page for a function, type
+
+    ?read.table
 
 
 
