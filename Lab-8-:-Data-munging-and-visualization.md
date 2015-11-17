@@ -54,8 +54,9 @@ Kinda hard to see anything with such a large Y axis. Let's limit this to genes w
    
     p + ylim(0,100)
 
-Now let's make a heatmap
+Now let's make a heatmap. It helps to define your own color palette instead of using defaults, though. 
 
+    my_palette <- colorRampPalette(c("green","black","red"))(n = 1000)
     heatmap.2(dat, dendrogram="both", trace="none", scale="row", density.info="none", col=my_palette)
 
 ![](http://i.imgur.com/ovAz600.png)
