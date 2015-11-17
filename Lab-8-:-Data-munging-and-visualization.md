@@ -40,7 +40,7 @@ Alright, let's start by reading our data in. R can parse data tables using the r
 
 First, set your working directory to the heatmaps directory you created and downloaded the data to.
 
-    setwd('/directory/to/heatmaps/folder')
+    setwd('/path/to/heatmaps/folder')
 
     dat <- read.table('TMM_normalized_FPKM_matrix.txt', header=TRUE)
     
