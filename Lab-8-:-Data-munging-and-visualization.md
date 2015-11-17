@@ -42,7 +42,7 @@ First, set your working directory to the heatmaps directory you created and down
 
     setwd('/path/to/heatmaps/folder')
 
-    dat <- read.table('TMM_normalized_FPKM_matrix.txt', header=TRUE)
+    dat <- read.table('TMM_normalized_FPKM_matrix.txt', header=TRUE, row.names=1)
     
 Now let's look at our data. Just like in unix, let's use head to look at the first few lines.
 
