@@ -50,8 +50,12 @@ Hint: You can reference a specific column from a dataframe using the dollar sign
     binstats <- stats.bin(dat$POS,dat$PI,N=100)
     matplot( binstats$centers, t(binstats$stats[ c("mean", "median","Q1", "Q3"),]), type="l",lty=c(1,2,2,2), col=c('red','blue','green','purple'), ylab="Pi diversity")
     
-Here, green solid line is mean Pi for each bin. Median pi is dotted blue. Q1 is dotted green. 
+mean = red
+median = blue
+Q1 = green
+Q3 = purple
 
+![](http://i.imgur.com/Z1yiVr9.png)
 
 
 # Calculate Fst 
