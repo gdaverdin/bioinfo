@@ -1,4 +1,4 @@
-For your final project for this class, you have quite a bit of freedom, but the foundation must including generating a genome assembly, transcriptome assembly, or variant identification. This will culminate in a short presentation (10-15min) describing 
+For your final project for this class, you have quite a bit of freedom, but the foundation must including generating a genome assembly, transcriptome assembly, variant identification or data wrangling and visualization. This will culminate in a short presentation (10-15min) describing 
 
 * your experimental design and question,
 * your data source and analysis pipeline, 
