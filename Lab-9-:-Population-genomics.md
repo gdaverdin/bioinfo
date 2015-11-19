@@ -2,6 +2,8 @@ Diversity is the spice of life.
 
 Today you will be using the Human 1000 genome project data from a set of individuals to characterize diversity along chromosome 1. We will calculate allele frequency, measures of pairwise diversity (pi), signatures of selective sweeps (Tajima's D), transition/transversion (Ts/Tv) rate, and other various population metrics. 
 
+Luckily, once you have a VCF file of high quality SNPs, running these analyses is easy. Like most informatics, the difficult part is knowing the underlying biology and mathematics, then interpreting the results. 
+
 # Copy data
 
 I have placed a gzip-compressed vcf file of 2,504 human genome SNP annotations here:
