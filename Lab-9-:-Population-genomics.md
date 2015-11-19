@@ -60,3 +60,5 @@ My output looks like this:
     1	16000	17	-1.97147
     1	17000	12	-1.84959
     1	18000	2	-0.512236
+
+Plot the results and look for an Fst outlier. 
