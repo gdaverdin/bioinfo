@@ -26,7 +26,10 @@ Let's just plot this in base R real quick.
     dat <- read.table('pi_test.sites.pi', header=TRUE) # or whatever you named your file.
     plot(dat$PI~dat$POS)
 
-X axis is position, Y axis is Pi. 
+
+
+X axis is position, Y axis is Pi. Well that's a pretty ugly and hard to interpret plot. Can you make a better one?
+
 
 # Calculate Fst 
 
