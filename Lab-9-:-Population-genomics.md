@@ -20,3 +20,5 @@ Let's start by using VCFtools to calculate pi, or pairwise nucleotide diversity.
 
 # Calculate Fst 
 
+# Calculate Ts/Tv
+
