@@ -7,3 +7,10 @@ Today you will be using the Human 1000 genome project data from a set of individ
 I have placed a gzip-compressed vcf file of 2,504 human genome SNP annotations here:
     
     /home/student/binf4550/data/09.PopulationGenomics/1.1-4000000.ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz
+
+# Calculate pairwise nucleotide diversity (pi)
+
+Let's start by using VCFtools to calculate pi, or pairwise nucleotide diversity. You can think of pi as "If you grab two random alleles out of a hat, what's the probability that they are different?"
+
+    /usr/local/vcftools/latest/bin/vcftools --gzvcf 1.1-4000000.ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --window-pi-step 1000 --chr 1 --out chr1_pi_1kb_window.out
+
