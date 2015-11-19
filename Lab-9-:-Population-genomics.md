@@ -20,7 +20,14 @@ Let's start by using VCFtools to calculate pi, or pairwise nucleotide diversity.
 
 Great. Look at the head of your *sites.pi file. It has 3 columns (CHROM, POS, PI). Download that data to your desktop and let's plot it using R. 
 
+Let's just plot this in base R real quick.
+
+    setwd('/wherever/you/put/your/data')
+    dat <- read.table('pi_test.sites.pi', header=TRUE) # or whatever you named your file.
+    plot(dat$PI~dat$POS)
+
+X axis is position, Y axis is Pi. 
+
 # Calculate Fst 
 
 # Calculate Ts/Tv
-
