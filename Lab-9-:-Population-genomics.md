@@ -48,6 +48,10 @@ Read the VCFtools manual to calculate Fst in 1kb sliding windows (--fst-window-s
 
 # Challenge: Look for evidence of a selective sweep using Tajima's D
 
+From wikipedia:
+
+> A negative Tajima's D signifies an excess of low frequency polymorphisms relative to expectation, indicating population size expansion (e.g., after a bottleneck or a selective sweep) and/or purifying selection. A positive Tajima's D signifies low levels of both low and high frequency polymorphisms, indicating a decrease in population size and/or balancing selection. 
+
 My output looks like this:
 
     CHROM	BIN_START	N_SNPS	TajimaD
@@ -61,4 +65,4 @@ My output looks like this:
     1	17000	12	-1.84959
     1	18000	2	-0.512236
 
-Plot the results and look for an Fst outlier. 
+Plot the results and look for  
