@@ -30,6 +30,10 @@ Let's just plot this in base R real quick.
 
 X axis is position, Y axis is Pi. Well that's a pretty ugly and hard to interpret plot. Can you make a better one?
 
+Google how to calculate the mean Pi for all individuals in R. The answer is 
+    
+    [1] 0.03279469
+
 # Calculate Fst 
 
 Fst is a measure of population differentiation. High Fst indicates that two populations are fixed for allelic differences. 
@@ -39,4 +43,3 @@ Fst is a measure of population differentiation. High Fst indicates that two popu
 Read the VCFtools manual to calculate Fst in 1kb sliding windows (--fst-window-size). Plot the data in R.
 
 # Look for evidence of a selective sweep using Tajima's D
-
