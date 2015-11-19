@@ -46,4 +46,17 @@ Fst is a measure of population differentiation. High Fst indicates that two popu
 
 Read the VCFtools manual to calculate Fst in 1kb sliding windows (--fst-window-size). Plot the data in R.
 
-# Look for evidence of a selective sweep using Tajima's D
+# Challenge: Look for evidence of a selective sweep using Tajima's D
+
+My output looks like this:
+
+    CHROM	BIN_START	N_SNPS	TajimaD
+    1	10000	11	-0.301026
+    1	11000	3	-0.0088863
+    1	12000	0	0
+    1	13000	21	-1.55401
+    1	14000	14	-0.381699
+    1	15000	25	-0.941925
+    1	16000	17	-1.97147
+    1	17000	12	-1.84959
+    1	18000	2	-0.512236
