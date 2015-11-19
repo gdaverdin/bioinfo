@@ -16,7 +16,9 @@ This file is a "slice", only including positions 1-4000000 on chromosome 1.
 
 Let's start by using VCFtools to calculate pi, or pairwise nucleotide diversity. You can think of pi as "If you grab two random alleles out of a hat, what's the probability that they are different?"
 
-    /usr/local/vcftools/latest/bin/vcftools --gzvcf 1.1-4000000.ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --site-pi --chr 1 --out chr1_pi.out
+    /usr/local/vcftools/latest/bin/vcftools --gzvcf 1.1-4000000.ALL.chr1.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --site-pi --chr 1 --out chr1_pi.out 
+
+Great. Look at the head of your *sites.pi file. It has 3 columns (CHROM, POS, PI). Download that data to your desktop and let's plot it using R. 
 
 # Calculate Fst 
 
