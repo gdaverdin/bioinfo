@@ -2,7 +2,7 @@ Diversity is the spice of life.
 
 Today you will be using the Human 1000 genome project data from a set of individuals to characterize diversity along chromosome 1. We will calculate allele frequency, measures of pairwise diversity (pi), signatures of selective sweeps (Tajima's D), transition/transversion (Ts/Tv) rate, and other various population metrics. 
 
-Luckily, once you have a VCF file of high quality SNPs, running these analyses is easy. Like most informatics, the difficult part is knowing the underlying biology and mathematics, then interpreting the results. 
+Luckily, once you have a VCF file of high quality SNPs, running these analyses is easy. Like most informatics, the difficult part is knowing the underlying biology and mathematics, then interpreting the results. We will be using VCFtools intensively today. Spend some time now to read the manual carefully and check out all the available options and analyses it can run. 
 
 # Copy data
 
@@ -30,7 +30,11 @@ Let's just plot this in base R real quick.
 
 X axis is position, Y axis is Pi. Well that's a pretty ugly and hard to interpret plot. Can you make a better one?
 
-
 # Calculate Fst 
+
+Fst is a measure of population differentiation. High Fst indicates that two populations are fixed for allelic differences. 
+
+![](http://www.nature.com/nrg/journal/v5/n8/images/nrg1401-i1.jpg)
+
 
 # Calculate Ts/Tv
