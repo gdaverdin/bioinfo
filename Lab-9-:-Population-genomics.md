@@ -65,4 +65,4 @@ My output looks like this:
     1	17000	12	-1.84959
     1	18000	2	-0.512236
 
-Plot the results and look for  
+Generate a histogram of Tajimas D using the hist() function in R. 
