@@ -36,8 +36,7 @@ Fst is a measure of population differentiation. High Fst indicates that two popu
 
 ![](http://www.nature.com/nrg/journal/v5/n8/images/nrg1401-i1.jpg)
 
-
-# Calculate Ts/Tv
+Read the VCFtools manual to calculate Fst in 1kb sliding windows (--fst-window-size). Plot the data in R.
 
 # Look for evidence of a selective sweep using Tajima's D
 
