@@ -34,6 +34,10 @@ Google how to calculate the mean Pi for all individuals in R. The answer is
     
     [1] 0.03279469
 
+Hint: You can reference a specific column from a dataframe using the dollar sign, like this
+
+    dat$PI
+
 # Calculate Fst 
 
 Fst is a measure of population differentiation. High Fst indicates that two populations are fixed for allelic differences. 
