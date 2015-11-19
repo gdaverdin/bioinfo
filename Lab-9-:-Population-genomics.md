@@ -38,3 +38,6 @@ Fst is a measure of population differentiation. High Fst indicates that two popu
 
 
 # Calculate Ts/Tv
+
+# Look for evidence of a selective sweep using Tajima's D
+
